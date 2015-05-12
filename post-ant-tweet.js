@@ -62,7 +62,6 @@ function saveUsedHeadline(ratedHeadline, done) {
 }
 
 function postTweet(ratedHeadline, done) {
-  debugger;
   text = toTitleCase(ratedHeadline.headline);
   if (dryRun) {
     console.log('Would have tweeted:', text);
@@ -77,7 +76,6 @@ function postTweet(ratedHeadline, done) {
 }
 
 function wrapUp(error, data) {
-  debugger;
   if (error) {
     console.log(error, error.stack);
 
@@ -86,6 +84,6 @@ function wrapUp(error, data) {
     }
   }
   else if (!dryRun) {
-    console.log('Tweeted:', data);
+    console.log('Tweeted:', data.text);
   }
 }
