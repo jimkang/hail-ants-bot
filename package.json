@@ -1,7 +1,7 @@
 {
   "name": "hail-ants-bot",
   "version": "1.0.0",
-  "description": "Posts news about the inexorable threat to humanity this is ants.",
+  "description": "Posts news about the inexorable threat to humanity that is ants.",
   "main": "index.js",
   "scripts": {
     "test": "make test"
