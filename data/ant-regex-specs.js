@@ -1,54 +1,58 @@
 module.exports = [
   {
-    regex: /china\'s military/g,
+    regex: /(china|iran)\'s military/g,
     ants: 'ants'
   },
   {
-    regex: /the chinese military is/g,
+    regex: /the (chinese|iranian) military is/g,
     ants: 'ants are'
   },
   {
-    regex: /china\'s central bank/g,
+    regex: /(china\'s|iran\'s) central bank/g,
     ants: 'ants'
   },
   {
-    regex: /china\'s/g,
+    regex: /(china\'s|iran\'s)/g,
     ants: 'ants\''
   },
   {
-    regex: /a chinese/g,
+    regex: /a (chinese|iranian)/g,
     ants: 'an ant'
   },
   {
-    regex: /chinese forest/g,
+    regex: /(chinese|iranian) forest/g,
     ants: 'ants'
   },
   {
-    regex: /chinese government/g,
+    regex: /(chinese|iranian) government/g,
     ants: 'ants'
   },
   {
-    regex: /chinese students/g,
+    regex: /(chinese|iranian) students/g,
     ants: 'ants'
   },
   {
-    regex: /chinese sailors/g,
+    regex: /(chinese|iranian) sailors/g,
     ants: 'ants'
   },
   {
-    regex: /chinese/g,
+    regex: /(chinese|iranian) hardliners/g,
+    ants: 'ants'
+  },
+  {
+    regex: /(chinese|iranian)/g,
     ants: 'ant'
   },
   {
-    regex: /a chinese/g,
+    regex: /a (chinese|iranian)/g,
     ants: 'an ant'
   },
   {
-    regex: /china leaders/g,
+    regex: /(china|iran) leaders/g,
     ants: 'ants'
   },
   {
-    regex: /china/g,
-    ants: 'ant'
+    regex: /(china|iran)/g,
+    ants: 'ants'
   }
 ];

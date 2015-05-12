@@ -27,6 +27,8 @@
     "jsonfile": "^2.0.0",
     "level": "^0.19.1",
     "lodash": "^3.8.0",
+    "probable": "^1.6.0",
+    "seedrandom": "^2.4.0",
     "titlecase": "^1.0.2",
     "twit": "^1.1.20"
   }

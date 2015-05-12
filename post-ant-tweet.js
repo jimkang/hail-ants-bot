@@ -9,6 +9,7 @@ var rateHeadlines = require('./rate-headlines');
 var pickHeadline = require('./pick-headline');
 var level = require('level');
 var toTitleCase = require('titlecase');
+var createTopicGetter = require('./topic-getter');
 
 var dryRun = false;
 if (process.argv.length > 2) {
@@ -17,6 +18,12 @@ if (process.argv.length > 2) {
 
 var twit = new Twit(config.twitter);
 var usedDb = level(__dirname + '/data/used.db');
+
+var seed = (new Date()).toISOString();
+console.log('seed:', seed);
+var getTopic = createTopicGetter({
+  seed: seed
+});
 
 async.waterfall(
   [
@@ -33,16 +40,19 @@ async.waterfall(
 
 function fetchHeadlines(done) {
   google.resultsPerPage = 20;
+  var topic = getTopic();
+  console.log('topic', topic);
+
   google.requestOptions = {
     qs: {
       hl: 'en',
       gl: 'us',
       tbm: 'nws',
       authuser: 0,
-      q: 'chinese'
+      q: topic
     }
   };
-  google('', done);
+  google(null, done);
 }
 
 function parseHeadlines(next, links, done) {
@@ -50,7 +60,7 @@ function parseHeadlines(next, links, done) {
 }
 
 function saveUsedHeadline(ratedHeadline, done) {
-  usedDb.put(ratedHeadline.headline, (new Date()).toISOString(), putDone);
+  usedDb.put(ratedHeadline.headline, seed, putDone);
   function putDone(error) {
     if (error) {
       done(error);

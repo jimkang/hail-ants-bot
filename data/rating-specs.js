@@ -1,10 +1,10 @@
 module.exports = [
   {
-    regex: /military/,
+    regex: /military|\Wwar\W|nuclear|\Warms\W|seized|capabilities|pentagon|drill/,
     score: 5
   },
   {
-    regex: /bank/,
+    regex: /bank|currenc|econom/,
     score: 5
   },
   {
@@ -17,7 +17,7 @@ module.exports = [
   },
   {
     regex: /company|brokerage|investors/,
-    score: 1
+    score: 2
   },
   {
     regex: /leaders/,
@@ -28,7 +28,7 @@ module.exports = [
     score: 1
   },
   {
-    regex: /chinese/,
+    regex: /chinese|iranian/,
     score: 1
   },
   {
@@ -48,15 +48,15 @@ module.exports = [
     score: 3
   },
   {
-    regex: /why/,
+    regex: /why|analysis/,
     score: 2
   },
   {
-    regex: /illion/,
+    regex: /illion|massive/,
     score: 5
   },
   {
-    regex: /afraid|fear/,
+    regex: /afraid|fear|mistrust/,
     score: 5
   },
   {
@@ -64,7 +64,23 @@ module.exports = [
     score: 5
   },
   {
+    regex: /hardliner|policy/,
+    score: 5
+  },
+  {
+    regex: /power|dominance/,
+    score: 5
+  },
+  {
     regex: /counterfeit/,
     score: 5
+  },
+  {
+    regex: /cyber/,
+    score: 5
+  },
+  {
+    regex: /talks|visit|summit/,
+    score: 2
   }
 ];
