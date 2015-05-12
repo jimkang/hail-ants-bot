@@ -41,7 +41,7 @@ module.exports = [
   },
   {
     regex: /market|stock|import|export/,
-    score: 3
+    score: 5
   },
   {
     regex: /bought|buying|buyer/,
