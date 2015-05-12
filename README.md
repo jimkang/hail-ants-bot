@@ -1,7 +1,7 @@
 hail-ants-bot
 =============
 
-This is a bot that does a thing.
+Posts news about the inexorable threat to humanity this is ants.
 
 Installation
 ------------
@@ -16,8 +16,7 @@ Then, create a `config.js` file in the project root that contains [Twitter API k
         consumer_secret: 'asdfasdjfbkjqwhbefubvskjhfbgasdjfhgaksjdhfgaksdxvc',
         access_token: '9999999999-zxcvkljhpoiuqwerkjhmnb,mnzxcvasdklfhwer',
         access_token_secret: 'opoijkljsadfbzxcnvkmokwertlknfgmoskdfgossodrh'
-      },
-      wordnikAPIKey: 'mkomniojnnuibiybvuytvutrctrxezewarewetxyfcftvuhbg'
+      }
     };
 
 Usage
