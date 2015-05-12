@@ -17,7 +17,7 @@ function createTopicGetter(opts) {
       '0-2': 'chinese',
       '3-4': 'china'
     },
-    '40-59': {
+    '40-69': {
       '0-2': 'iranian',
       '3-4': 'iran'
     }
