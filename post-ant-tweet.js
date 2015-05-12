@@ -73,6 +73,8 @@ function saveUsedHeadline(ratedHeadline, done) {
 
 function postTweet(ratedHeadline, done) {
   text = toTitleCase(ratedHeadline.headline);
+  text = text.replace(/\WUs\W/g, 'US');
+
   if (dryRun) {
     console.log('Would have tweeted:', text);
     callNextTick(done, null);

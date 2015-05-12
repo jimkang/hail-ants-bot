@@ -1,6 +1,6 @@
 module.exports = [
   {
-    regex: /military|\Wwar\W|nuclear|\Warms\W|seized|capabilities|pentagon|drill/,
+    regex: /military|\Wwar\W|nuclear|nuke|\Warms\W|seized|capabilities|pentagon|drill|brinksmanship/,
     score: 5
   },
   {
@@ -48,7 +48,7 @@ module.exports = [
     score: 3
   },
   {
-    regex: /why|analysis/,
+    regex: /why|what|analysis|analyst/,
     score: 2
   },
   {
@@ -80,7 +80,11 @@ module.exports = [
     score: 5
   },
   {
-    regex: /talks|visit|summit/,
+    regex: /trafficking/,
+    score: 2
+  },
+  {
+    regex: /talks|visit|summit|bilateral/,
     score: 2
   }
 ];
