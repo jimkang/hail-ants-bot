@@ -1,15 +1,11 @@
 module.exports = [
   {
-    regex: /(?:china|iran)\'s military/g,
-    ants: 'ants'
+    regex: /(?:china|iran)\'s (?:military|forest|government|central bank) (\w+)s/g,
+    ants: 'ants $1'
   },
   {
     regex: /the (?:chinese|iranian) military is/g,
     ants: 'ants are'
-  },
-  {
-    regex: /(?:china\'s|iran\'s) central bank/g,
-    ants: 'ants'
   },
   {
     regex: /(?:china\'s|iran\'s)/g,
@@ -20,23 +16,7 @@ module.exports = [
     ants: 'an ant'
   },
   {
-    regex: /(?:chinese|iranian) forest/g,
-    ants: 'ants'
-  },
-  {
-    regex: /(?:chinese|iranian) government/g,
-    ants: 'ants'
-  },
-  {
-    regex: /(?:chinese|iranian) students/g,
-    ants: 'ants'
-  },
-  {
-    regex: /(?:chinese|iranian) sailors/g,
-    ants: 'ants'
-  },
-  {
-    regex: /(?:chinese|iranian|iran|china) hardliners/g,
+    regex: /(?:chinese|iranian) (?:students|sailors|people|hardliners)/g,
     ants: 'ants'
   },
   {
@@ -54,6 +34,10 @@ module.exports = [
   {
     regex: /in (?:china|iran)/g,
     ants: 'in ant custody'
+  },
+  {
+    regex: /(?:china|iran) (\w+)s/g,
+    ants: 'ants $1'
   },
   {
     regex: /(?:china|iran)/g,

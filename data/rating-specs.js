@@ -56,7 +56,7 @@ module.exports = [
     score: 5
   },
   {
-    regex: /afraid|fear|mistrust/,
+    regex: /afraid|fear|mistrust|worry/,
     score: 5
   },
   {
