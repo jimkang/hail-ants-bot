@@ -49,7 +49,8 @@ function fetchHeadlines(done) {
       gl: 'us',
       tbm: 'nws',
       authuser: 0,
-      q: topic
+      q: topic,
+      num: 50
     }
   };
   google(null, done);

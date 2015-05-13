@@ -15,4 +15,7 @@ npm-install:
 	npm install
 	npm prune
 
+pushall:
+	git push origin master && git push server master
+
 post-receive: sync-worktree-to-git npm-install
