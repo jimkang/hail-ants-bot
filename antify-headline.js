@@ -5,7 +5,7 @@ function antifyHeadline(headline) {
 }
 
 function applyRegexSpec(headline, regexSpec) {
-  return headline.toLowerCase().replace(regexSpec.regex, regexSpec.ants);
+  return headline.replace(regexSpec.regex, regexSpec.ants);
 }
 
 module.exports = antifyHeadline;

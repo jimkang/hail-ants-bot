@@ -5,7 +5,7 @@ run:
 	node post-ant-tweet.js
 
 test:
-	node tests/basictests.js
+	node tests/antify-headline-tests.js
 
 sync-worktree-to-git:
 	git --work-tree=$(HOMEDIR) --git-dir=$(GITDIR) checkout -f
