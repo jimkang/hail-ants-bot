@@ -8,7 +8,7 @@ run-snake-people:
 	CONFIG="snake-people/snake-people-config" node post-ant-tweet.js --dry
 
 test:
-	node tests/antify-headline-tests.js
+	node tests/transform-headline-tests.js
 
 sync-worktree-to-git:
 	git --work-tree=$(HOMEDIR) --git-dir=$(GITDIR) checkout -f

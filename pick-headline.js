@@ -13,7 +13,12 @@ function pickFirstUnused(usedDb, ratedHeadlines, done) {
   async.detect(ratedHeadlines, headlineIsUnused, reportResult);
 
   function reportResult(result) {
-    done(null, result);
+    if (result.rating < 1) {
+      done(new Error('Could not find a positively rated headline.'));
+    }
+    else {
+      done(null, result);
+    }
   }
 
   function headlineIsUnused(ratedHeadline, checkDone) {

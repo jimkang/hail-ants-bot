@@ -48,7 +48,7 @@ module.exports = [
     score: 3
   },
   {
-    regex: /why|what|analysis|analyst/i,
+    regex: /why|what|analysis|analyst|how/i,
     score: 2
   },
   {
