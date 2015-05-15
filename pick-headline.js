@@ -15,7 +15,12 @@ function pickFirstUnused(usedDb, ratedHeadlines, done) {
   );
 
   function reportResult(result) {
-    if (result.rating < 3) {
+    if (!result) {
+      done(new Error('No result object passed to reportResult. ratedHeadlines:' +
+        JSON.stringify(ratedHeadlines, null, '  '))
+      );
+    }
+    else if (result.rating < 3) {
       done(new Error('Could not find a well-rated headline.'));
     }
     else {
