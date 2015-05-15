@@ -71,6 +71,10 @@ test('Snake people', function snakePeople(t) {
     {
       headline: 'Here Comes the Echo Boomer to Save the Housing Market',
       replacement: 'Here Comes the Crotalid to Save the Housing Market'
+    },
+    {
+      headline: 'Improving Millennials\' Financial Literacy With Mobile Technology',
+      replacement: 'Improving snake people\'s Financial Literacy With Mobile Technology'
     }
   ];
 

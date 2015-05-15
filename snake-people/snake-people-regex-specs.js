@@ -1,6 +1,10 @@
 module.exports = [
   // Millennial
   {
+    regex: /\bmillennials\'/ig,
+    replacement: "snake people's"
+  },
+  {
     regex: /\bMillennial\b/g,
     replacement: "Snake Person"
   },
@@ -15,14 +19,6 @@ module.exports = [
   {
     regex: /\bmillennials\b/g,
     replacement: "snake people"
-  },
-  {
-    regex: /\bMillennials'\b/g,
-    replacement: "Snake People's"
-  },
-  {
-    regex: /\bmillennials'\b/g,
-    replacement: "snake people's"
   },
   // Common misspelling
   {
@@ -107,11 +103,11 @@ module.exports = [
     replacement: "Thoth-Amon"
   },
   {
-    regex: /\bHelicopter Parents'\b/g,
+    regex: /\bHelicopter Parents\'\b/g,
     replacement: "Thulsa Doom's"
   },
   {
-    regex: /\bhelicopter parents'\b/g,
+    regex: /\bhelicopter parents\'\b/g,
     replacement: "Thoth-Amon's"
   },
 
@@ -125,11 +121,11 @@ module.exports = [
     replacement: "Wadjet"
   },
   {
-    regex: /\bHelium Parents'\b/g,
+    regex: /\bHelium Parents\'\b/g,
     replacement: "Apep's"
   },
   {
-    regex: /\bHelium parents'\b/g,
+    regex: /\bHelium parents\'\b/g,
     replacement: "Apep's"
   },
 
@@ -143,11 +139,11 @@ module.exports = [
     replacement: "Quetzalcoatl's chosen"
   },
   {
-    regex: /\bTrophy Kids'\b/g,
+    regex: /\bTrophy Kids\'\b/g,
     replacement: "Quetzalcoatl's Chosen's"
   },
   {
-    regex: /\btrophy kids'\b/g,
+    regex: /\btrophy kids\'\b/g,
     replacement: "Quetzalcoatl's chosen's"
   },
 
