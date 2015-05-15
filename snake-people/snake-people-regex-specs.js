@@ -1,505 +1,268 @@
 module.exports = [
-  // Millennial
+  // millennial
   {
     regex: /\bmillennials\'/ig,
     replacement: "snake people's"
   },
   {
-    regex: /\bMillennial\b/g,
-    replacement: "Snake Person"
-  },
-  {
-    regex: /\bmillennial\b/g,
+    regex: /\bmillennial\b/ig,
     replacement: "snake person"
   },
   {
-    regex: /\bMillennials\b/g,
-    replacement: "Snake People"
-  },
-  {
-    regex: /\bmillennials\b/g,
+    regex: /\bmillennials\b/ig,
     replacement: "snake people"
   },
-  // Common misspelling
+  // common misspelling
   {
-    regex: /\bMillienials\b/g,
-    replacement: "Snake People"
-  },
-  // Common misspelling
-  {
-    regex: /\bmillienials\b/g,
+    regex: /\bmillienials\b/ig,
     replacement: "snake people"
   },
 
-  // The Great Recession 
+  // the great recession 
   {
-    regex: /\bGreat Recession\b/g,
-    replacement: "Time of Shedding and Cold Rocks"
-  },
-  {
-    regex: /\bgreat recession\b/g,
+    regex: /\bgreat recession\b/ig,
     replacement: "time of shedding and cold rocks"
   },
 
-  // The Great Depression
+  // the great depression
   {
-    regex: /\bGreat Depression\b/g,
-    replacement: "Clutch Plague"
-  },
-  {
-    regex: /\bgreat depression\b/g,
+    regex: /\bgreat depression\b/ig,
     replacement: "clutch plague"
   },
 
-  // Occupy Wall Street
+  // occupy wall street
   {
-    regex: /\bOccupy Wall Street\b/g,
-    replacement: "Great Ape-Snake War"
-  },
-  {
-    regex: /\boccupy wall street\b/g,
+    regex: /\boccupy wall street\b/ig,
     replacement: "great ape-snake war"
   },
   {
-    regex: /\bOccupy Movement\b/g,
-    replacement: "Great Ape-Snake War"
-  },
-  {
-    regex: /\boccupy movement\b/g,
+    regex: /\boccupy movement\b/ig,
     replacement: "great ape-snake war"
   },
   {
-    regex: /\bOWS Movement\b/g,
-    replacement: "Great Ape-Snake War"
-  },
-  {
-    regex: /\bOWS movement\b/g,
+    regex: /\bows movement\b/ig,
     replacement: "great ape-snake war"
   },
   {
-    regex: /\bows movement\b/g,
-    replacement: "great ape-snake war"
-  },
-  {
-    regex: /\b ows \b/g,
-    replacement: "great ape-snake war"
-  },
-  {
-    regex: /\b OWS \b/g,
-    replacement: "Great Ape-Snake War"
-  },
-  {
-    regex: /\b ows \b/g,
+    regex: /\b ows \b/ig,
     replacement: "great ape-snake war"
   },
 
-  // Helicopter Parents
+  // helicopter parents
   {
-    regex: /\bHelicopter Parents\b/g,
-    replacement: "Thulsa Doom"
-  },
-  {
-    regex: /\bhelicopter parents\b/g,
-    replacement: "Thoth-Amon"
-  },
-  {
-    regex: /\bHelicopter Parents\'\b/g,
-    replacement: "Thulsa Doom's"
-  },
-  {
-    regex: /\bhelicopter parents\'\b/g,
-    replacement: "Thoth-Amon's"
+    regex: /\bhelicopter(?: parent)?(\'+s)?\b/ig,
+    replacement: "thulsa doom$1"
   },
 
-  // Helium Parents
+  // // helium parents
   {
-    regex: /\bHelium Parents\b/g,
-    replacement: "Wadjets"
+    regex: /\b(?:helium|(?:free(?:-| )range))(?: parent)?(\'+s)?\b/ig,
+    replacement: "thoth-amon$1"
+  },
+  
+  // trophy kids
+  {
+    regex: /\btrophy kids\b/ig,
+    replacement: "quetzalcoatl's chosen"
   },
   {
-    regex: /\bhelium parents\b/g,
-    replacement: "Wadjet"
-  },
-  {
-    regex: /\bHelium Parents\'\b/g,
-    replacement: "Apep's"
-  },
-  {
-    regex: /\bHelium parents\'\b/g,
-    replacement: "Apep's"
+    regex: /\btrophy kids\'\b/ig,
+    replacement: "quetzalcoatl's chosen's"
   },
 
-  // Trophy Kids
+  // digital natives
   {
-    regex: /\bTrophy Kids\b/g,
-    replacement: "Quetzalcoatl's Chosen"
-  },
-  {
-    regex: /\btrophy kids\b/g,
-    replacement: "Quetzalcoatl's chosen"
-  },
-  {
-    regex: /\bTrophy Kids\'\b/g,
-    replacement: "Quetzalcoatl's Chosen's"
-  },
-  {
-    regex: /\btrophy kids\'\b/g,
-    replacement: "Quetzalcoatl's chosen's"
-  },
-
-  // Digital Natives
-  {
-    regex: /\bDigital Native\b/g,
-    replacement: "Parseltongue"
-  },
-  {
-    regex: /\bDigital Natives\b/g,
-    replacement: "Parseltongues"
-  },
-  {
-    regex: /\bdigital native\b/g,
+    regex: /\bdigital native\b/ig,
     replacement: "parseltongue"
   },
   {
-    regex: /\bdigital natives\b/g,
+    regex: /\bdigital natives\b/ig,
     replacement: "parseltongues"
   },
 
-  // Generation Y
+  // generation y
   {
-    regex: /\bGeneration Y\b/g,
-    replacement: "Serpent Society"
-  },
-  {
-    regex: /\bgeneration y\b/g,
+    regex: /\bgeneration y\b/ig,
     replacement: "serpent society"
   },
   {
-    regex: /\bGen Y\b/g,
-    replacement: "Society of the Serpent"
+    regex: /\bgen y\b/ig,
+    replacement: "society of the serpent"
   },
   {
-    regex: /\bgen y\b/g,
+    regex: /\bgeny\b/ig,
     replacement: "serpent society"
   },
   {
-    regex: /\bGenY\b/g,
-    replacement: "Serpent Society"
-  },
-  {
-    regex: /\bgeny\b/g,
-    replacement: "serpent society"
-  },
-  {
-    regex: /\bGeneration Why\b/g,
-    replacement: "Serpent Society"
-  },
-  {
-    regex: /\bgeneration why\b/g,
+    regex: /\bgeneration why\b/ig,
     replacement: "serpent society"
   },
 
-  // Millennial Generation
+  // millennial generation
   {
-    regex: /\bMillennial Generation\b/g,
-    replacement: "Plissken Faction"
+    regex: /\bmillennial generation\b/ig,
+    replacement: "plissken faction"
   },
   {
-    regex: /\bmillennial generation\b/g,
-    replacement: "Plissken faction"
-  },
-  {
-    regex: /\bGeneration Millennial\b/g,
-    replacement: "Plissken Faction"
-  },
-  {
-    regex: /\bgeneration millennial\b/g,
-    replacement: "Plissken faction"
+    regex: /\bgeneration millennial\b/ig,
+    replacement: "plissken faction"
   },
 
-  // Generation We
+  // generation we
   {
-    regex: /\bGeneration We\b/g,
-    replacement: "Caduceus Cult"
-  },
-  {
-    regex: /\bgeneration we\b/g,
+    regex: /\bgeneration we\b/ig,
     replacement: "caduceus cult"
   },
   {
-    regex: /\bWe Generation\b/g,
-    replacement: "Cult of the Caduceus "
-  },
-  {
-    regex: /\bwe generation\b/g,
+    regex: /\bwe generation\b/ig,
     replacement: "cult of the caduceus "
   },
 
-  // Generation Me
+  // generation me
   {
-    regex: /\bGeneration Me\b/g,
-    replacement: "The Cult of the Serpent"
-  },
-  {
-    regex: /\bgeneration me\b/g,
+    regex: /\bgeneration me\b/ig,
     replacement: "the cult of the serpent"
   },
 
-  // Global Generation
+  // global generation
   {
-    regex: /\bGlobal Generation\b/g,
-    replacement: "Tannin's Horde"
+    regex: /\bglobal generation\b/ig,
+    replacement: "tannin's horde"
   },
   {
-    regex: /\bglobal generation\b/g,
-    replacement: "Tannin's horde"
-  },
-  {
-    regex: /\bGeneration Global\b/g,
-    replacement: "Horde of Tannin"
-  },
-  {
-    regex: /\bgeneration global\b/g,
-    replacement: "horde of Tannin"
+    regex: /\bgeneration global\b/ig,
+    replacement: "horde of tannin"
   },
 
-  // Generation Next
+  // generation next
   {
-    regex: /\bGeneration Next\b/g,
-    replacement: "Time of Nidhogg"
-  },
-  {
-    regex: /\bgeneration next\b/g,
-    replacement: "time of Nidhogg"
+    regex: /\bgeneration next\b/ig,
+    replacement: "time of nidhogg"
   },
 
-  // Net Generation
+  // net generation
   {
-    regex: /\bNet Generation\b/g,
-    replacement: "Damballa's Coils"
+    regex: /\bnet generation\b/ig,
+    replacement: "damballa's coils"
   },
   {
-    regex: /\bnet generation\b/g,
-    replacement: "Damballa's coils"
-  },
-  {
-    regex: /\bGeneration Net\b/g,
-    replacement: "Coils of Damballa"
-  },
-  {
-    regex: /\bgeneration net\b/g,
-    replacement: "Coils of Damballa"
+    regex: /\bgeneration net\b/ig,
+    replacement: "coils of damballa"
   },
 
-  // Echo Boomers
+  // echo boomers
   {
-    regex: /\bEcho Boomers\b/g,
-    replacement: "Crotalids"
-  },
-  {
-    regex: /\becho Boomers\b/g,
+    regex: /\becho boomers\b/ig,
     replacement: "crotalids"
   },
   {
-    regex: /\bEcho Boomer\b/g,
-    replacement: "Crotalid"
-  },
-  {
-    regex: /\becho Boomer\b/g,
+    regex: /\becho boomer\b/ig,
     replacement: "crotalid"
   },
 
-  // New Boomers
+  // new boomers
   {
-    regex: /\bNew Boomers\b/g,
-    replacement: "Jörmungandr's Circle"
+    regex: /\bnew boomers\b/ig,
+    replacement: "jörmungandr's circle"
   },
   {
-    regex: /\bnew Boomers\b/g,
-    replacement: "Jörmungandr's circle"
-  },
-  {
-    regex: /\bNew Boomers'\b/g,
-    replacement: "Jörmungandr's Circle's"
-  },
-  {
-    regex: /\bnew Boomers'\b/g,
-    replacement: "Jörmungandr's circle's"
+    regex: /\bnew boomers'\b/ig,
+    replacement: "jörmungandr's circle's"
   },
 
-  // Generation Flux
+  // generation flux
   {
-    regex: /\bGeneration Flux\b/g,
-    replacement: "Hiss Club"
-  },
-  {
-    regex: /\bgeneration flux\b/g,
+    regex: /\bgeneration flux\b/ig,
     replacement: "hiss club"
   },
   {
-    regex: /\bFlux Generation\b/g,
-    replacement: "Hiss Club"
-  },
-  {
-    regex: /\bflux generation\b/g,
+    regex: /\bflux generation\b/ig,
     replacement: "hiss club"
   },
 
-  // Generation Sell
+  // generation sell
   {
-    regex: /\bGeneration Sell\b/g,
-    replacement: "Kaa Tribe"
+    regex: /\bgeneration sell\b/ig,
+    replacement: "kaa tribe"
   },
   {
-    regex: /\bgeneration sell\b/g,
-    replacement: "Kaa tribe"
-  },
-  {
-    regex: /\bSell Generation\b/g,
-    replacement: "Tribe of Kaa"
-  },
-  {
-    regex: /\bsell generation\b/g,
-    replacement: "tribe of Kaa"
+    regex: /\bsell generation\b/ig,
+    replacement: "tribe of kaa"
   },
 
-  // Boomerang Generation
+  // boomerang generation
   {
-    regex: /\bBoomerang Generation\b/g,
-    replacement: "Ouroboros Society"
-  },
-  {
-    regex: /\bboomerang generation\b/g,
+    regex: /\bboomerang generation\b/ig,
     replacement: "ouroboros society"
   },
   {
-    regex: /\bGeneration Boomerang\b/g,
-    replacement: "Ouroboros Society"
-  },
-  {
-    regex: /\bgeneration boomerang\b/g,
+    regex: /\bgeneration boomerang\b/ig,
     replacement: "ouroboros society"
   },
 
-  // Peter Pan Generation
+  // peter pan generation
   {
-    regex: /\bPeter Pan Generation\b/g,
-    replacement: "Neheb-Kau Cult"
+    regex: /\bpeter pan generation\b/ig,
+    replacement: "neheb-kau cult"
   },
   {
-    regex: /\bPeter Pan generation\b/g,
-    replacement: "Neheb-Kau cult"
+    regex: /\bpeter pan generation\b/ig,
+    replacement: "neheb-kau cult"
   },
   {
-    regex: /\bpeter pan generation\b/g,
-    replacement: "Neheb-Kau cult"
-  },
-  {
-    regex: /\bGeneration Peter Pan\b/g,
-    replacement: "Neheb-Kau Cult"
-  },
-  {
-    regex: /\bgeneration Peter Pan\b/g,
-    replacement: "Neheb-Kau cult"
-  },
-  {
-    regex: /\bgeneration peter pan\b/g,
-    replacement: "Neheb-Kau cult"
+    regex: /\bgeneration peter pan\b/ig,
+    replacement: "neheb-kau cult"
   },
 
-  // Generation 911
+  // generation 911
   {
-    regex: /\bGeneration 9\/11\b/g,
-    replacement: "Kaa Tribe"
+    regex: /\bgeneration 9\/11\b/ig,
+    replacement: "kaa tribe"
   },
   {
-    regex: /\bGeneration 911\b/g,
-    replacement: "Kaa Tribe"
+    regex: /\bgeneration 9\/11\b/ig,
+    replacement: "kaa tribe"
   },
   {
-    regex: /\bgeneration 9\/11\b/g,
-    replacement: "Kaa tribe"
+    regex: /\b9\/11 generation\b/ig,
+    replacement: "tribe of the kaa"
   },
   {
-    regex: /\bgeneration 911\b/g,
-    replacement: "Kaa tribe"
+    regex: /\bgen 9\/11\b/ig,
+    replacement: "kaa tribe"
   },
   {
-    regex: /\b9\/11 Generation\b/g,
-    replacement: "Tribe of the Kaa"
-  },
-  {
-    regex: /\b9\/11 generation\b/g,
-    replacement: "tribe of the Kaa"
-  },
-  {
-    regex: /\bGen 9\/11\b/g,
-    replacement: "Kaa Tribe"
-  },
-  {
-    regex: /\bgen 9\/11\b/g,
-    replacement: "Kaa tribe"
-  },
-  {
-    regex: /\bGen 911\b/g,
-    replacement: "Kaa Tribe"
-  },
-  {
-    regex: /\bgen 911\b/g,
-    replacement: "Kaa tribe"
+    regex: /\bgen 911\b/ig,
+    replacement: "kaa tribe"
   },
 
-  // The Generation of €700
+  // the generation of €700
   {
-    regex: /\bThe Generation of €700\b/g,
-    replacement: "Ophion"
-  },
-  {
-    regex: /\bthe generation of €700\b/g,
+    regex: /\bthe generation of €700\b/ig,
     replacement: "ophion"
   },
   {
-    regex: /\b€700 Generation\b/g,
-    replacement: "Ophion"
-  },
-  {
-    regex: /\b€700 generation\b/g,
+    regex: /\b€700 generation\b/ig,
     replacement: "ophion"
   },
 
-  // Mileurista
+  // mileurista
   {
-    regex: /\bMileurista\b/g,
-    replacement: "Nagual"
+    regex: /\bmileurista\b/ig,
+    replacement: "nagual"
   },
   {
-    regex: /\bmileurista\b/g,
-    replacement: "Nagual"
-  },
-  {
-    regex: /\bMilleurista\b/g,
-    replacement: "Nagual"
-  },
-  {
-    regex: /\bmilleurista\b/g,
-    replacement: "Nagual"
+    regex: /\bmilleurista\b/ig,
+    replacement: "nagual"
   },
 
-  // Precarious Generation
+  // precarious generation
   {
-    regex: /\bPrecarious Generation\b/g,
-    replacement: "Gargouille"
-  },
-  {
-    regex: /\bprecarious generation\b/g,
+    regex: /\bprecarious generation\b/ig,
     replacement: "gargouille"
   },
   {
-    regex: /\bGeneration Precarious\b/g,
-    replacement: "Gargouille"
-  },
-  {
-    regex: /\bgeneration precarious\b/g,
+    regex: /\bgeneration precarious\b/ig,
     replacement: "gargouille"
   }
 ];

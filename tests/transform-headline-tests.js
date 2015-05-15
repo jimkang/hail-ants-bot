@@ -66,15 +66,23 @@ test('Snake people', function snakePeople(t) {
   var testCases = [
     {
       headline: 'Echo Boomers Will Have Oversized Impact on Retail, Real Estate',
-      replacement: 'Crotalids Will Have Oversized Impact on Retail, Real Estate'
+      replacement: 'crotalids Will Have Oversized Impact on Retail, Real Estate'
     },
     {
       headline: 'Here Comes the Echo Boomer to Save the Housing Market',
-      replacement: 'Here Comes the Crotalid to Save the Housing Market'
+      replacement: 'Here Comes the crotalid to Save the Housing Market'
     },
     {
       headline: 'Improving Millennials\' Financial Literacy With Mobile Technology',
       replacement: 'Improving snake people\'s Financial Literacy With Mobile Technology'
+    },
+    {
+      headline: 'Free-Range vs. Helicopter: What Does It Mean to Be a Good Parent?',
+      replacement: 'thoth-amon vs. thulsa doom: What Does It Mean to Be a Good Parent?'
+    },
+    {
+      headline: 'Motherlode | Free Range vs. Helicopter Parenting: Get the Facts',
+      replacement: 'Motherlode | thoth-amon vs. thulsa doom Parenting: Get the Facts'
     }
   ];
 

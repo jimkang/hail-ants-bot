@@ -13,12 +13,7 @@ function createSnakePeopleTopicGetter(opts) {
   });
 
   var table = probable.createTableFromDef({
-    '0-24': 'millennials',
-    '25-29': {
-      '0-3': 'occupy wall street',
-      '4-5': 'occupy movement',
-      '6-6': 'ows movement'
-    },
+    '0-29': 'millennials',
     '30-39': {
       '0-2': 'helicopter parents',
       '3-3': 'trophy kids'
@@ -47,6 +42,11 @@ function createSnakePeopleTopicGetter(opts) {
       '0-1': 'great recession',
       '2-2': 'great depression'
     },
+    '66-67': {
+      '0-3': 'occupy wall street',
+      '4-5': 'occupy movement',
+      '6-6': 'ows movement'
+    }
   });
 
   return table.roll;

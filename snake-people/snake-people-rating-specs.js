@@ -9,7 +9,7 @@ module.exports = [
   },
   {
     regex: /occupy|ows/i,
-    score: 3
+    score: 5
   },
   {
     regex: /helicopter/i,
@@ -45,7 +45,7 @@ module.exports = [
   },
   {
     regex: /mistake|wrong|weird|different|misguided/i,
-    score: 5
+    score: 3
   },
   {
     regex: /cash|financial/i,
