@@ -85,7 +85,7 @@ function saveUsedHeadline(ratedHeadline, done) {
 
 function postTweet(ratedHeadline, done) {
   text = toTitleCase(ratedHeadline.headline);
-  text = text.replace(/\WUs\W/g, 'US');
+  text = text.replace(/(\W)Us(\W)/g, '$1US$2');
 
   if (dryRun) {
     console.log('Would have tweeted:', text);

@@ -87,6 +87,10 @@ test('Snake people', function snakePeople(t) {
     {
       headline: 'For Young Americans, Unemployment Returns to Pre-Recession Levels',
       replacement: 'For ophidian moultlings, Unemployment Returns to Pre-time of shedding and cold rocks Levels'
+    },
+    {
+      headline: '\'Wikipedia Generation\' Reinvents the Workplace',
+      replacement: undefined
     }
   ];
 

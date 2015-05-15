@@ -10,11 +10,13 @@ function rankByRating(a, b) {
 }
 
 function pickFirstUnused(usedDb, ratedHeadlines, done) {
-  async.detect(ratedHeadlines, headlineIsUnused, reportResult);
+  async.detect(
+    ratedHeadlines.filter(headlineExists), headlineIsUnused, reportResult
+  );
 
   function reportResult(result) {
-    if (result.rating < 1) {
-      done(new Error('Could not find a positively rated headline.'));
+    if (result.rating < 3) {
+      done(new Error('Could not find a well-rated headline.'));
     }
     else {
       done(null, result);
@@ -22,7 +24,9 @@ function pickFirstUnused(usedDb, ratedHeadlines, done) {
   }
 
   function headlineIsUnused(ratedHeadline, checkDone) {
-    usedDb.get(ratedHeadline.headline.toLowerCase(), reportWhetherHeadlineWasFound);
+    usedDb.get(
+      ratedHeadline.headline.toLowerCase(), reportWhetherHeadlineWasFound
+    );
 
     function reportWhetherHeadlineWasFound(error, value) {
       if (!error && value) {
@@ -33,4 +37,9 @@ function pickFirstUnused(usedDb, ratedHeadlines, done) {
   }
 }
 
+function headlineExists(headlinePack) {
+  return headlinePack && headlinePack.headline;
+}
+
 module.exports = pickHeadline;
+

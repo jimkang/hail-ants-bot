@@ -8,8 +8,12 @@ module.exports = [
     score: 5
   },
   {
-    regex: /occupy|ows/i,
-    score: 5
+    regex: /generation/i,
+    score: 4
+  },
+  {
+    regex: /occupy wall street|\bows\b/i,
+    score: 3
   },
   {
     regex: /helicopter/i,
@@ -20,8 +24,8 @@ module.exports = [
     score: 2
   },
   {
-    regex: /digital|tech|saavy/i,
-    score: 4
+    regex: /digital|tech|savvy/i,
+    score: 1
   },
   {
     regex: /\Wnet\W/i,
@@ -45,11 +49,11 @@ module.exports = [
   },
   {
     regex: /mistake|wrong|weird|different|misguided/i,
-    score: 3
+    score: 1
   },
   {
     regex: /cash|financial/i,
-    score: 2
+    score: 1
   },
   {
     regex: /rank/i,
@@ -57,14 +61,14 @@ module.exports = [
   },
   {
     regex: /employ|work|career/i,
-    score: 3
-  },
-  {
-    regex: /brand|lifestyle|attract|retain|participat|privacy/i,
-    score: 3
-  },
-  {
-    regex: /why|what|analysis|analyst|ready|how|don\'t/i,
     score: 2
+  },
+  {
+    regex: /\b(brand|lifestyle|attract|retain|participat|privacy)\b/i,
+    score: 2
+  },
+  {
+    regex: /why|what|analysis|analyst|ready|\bhow\b|don\'t/i,
+    score: 1
   }
 ];

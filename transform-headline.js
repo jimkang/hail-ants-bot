@@ -1,3 +1,5 @@
+var _ = require('lodash');
+
 function createTransformHeadline(opts) {
   var regexSpecs;
   if (opts) {
@@ -5,14 +7,20 @@ function createTransformHeadline(opts) {
   }
 
   return function transformHeadline(headlinePack) {
-    return regexSpecs.reduce(applyRegexSpec, headlinePack);
+    var transformedPack = regexSpecs.reduce(applyRegexSpec, headlinePack);
+    if (transformedPack.headline === headlinePack.headline) {
+      // Mark that headline could not be transformed.
+      transformedPack.headline = undefined;
+    }
+    return transformedPack;
   }
 }
 
 function applyRegexSpec(headlinePack, regexSpec) {
-  headlinePack.headline = headlinePack.headline
+  var transformedPack = _.cloneDeep(headlinePack);
+  transformedPack.headline = headlinePack.headline
     .replace(regexSpec.regex, regexSpec.replacement);
-  return headlinePack;
+  return transformedPack;
 }
 
 module.exports = createTransformHeadline;
