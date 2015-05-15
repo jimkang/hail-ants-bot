@@ -14,10 +14,7 @@ function createSnakePeopleTopicGetter(opts) {
 
   var table = probable.createTableFromDef({
     '0-29': 'millennials',
-    '30-39': {
-      '0-2': 'helicopter parents',
-      '3-3': 'trophy kids'
-    },
+    '30-39': 'helicopter parents',
     '40-44': 'digital natives',
     '45-59': {
       '0-4': 'generation y',
