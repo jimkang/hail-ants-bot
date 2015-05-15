@@ -2,9 +2,24 @@ var test = require('tape');
 var createTransformHeadline = require('../transform-headline');
 var antRegexSpecs = require('../data/ant-regex-specs');
 
-var antifyHeadline = createTransformHeadline({
-  regexSpecs: antRegexSpecs
-});
+function runTransformOnTestCases(t, transformFn, testCases)  {
+  t.plan(testCases.length);
+
+  testCases.forEach(runTestCase);
+
+  function runTestCase(testCase) {
+    var headlinePack = {
+      headline: testCase.headline
+    };
+    var expectedResult = {
+      headline: testCase.replacement
+    };
+
+    t.deepEqual(
+      transformFn(headlinePack), expectedResult, 'Antifies correctly.'
+    );
+  }
+}
 
 test('Pluralization', function pluralization(t) {
   var testCases = [
@@ -39,20 +54,9 @@ test('Pluralization', function pluralization(t) {
     }
   ];
 
-  t.plan(testCases.length);
+  var antifyHeadline = createTransformHeadline({
+    regexSpecs: antRegexSpecs
+  });
 
-  testCases.forEach(runTestCase);
-
-  function runTestCase(testCase) {
-    var headlinePack = {
-      headline: testCase.headline
-    };
-    var expectedResult = {
-      headline: testCase.replacement
-    };
-
-    t.deepEqual(
-      antifyHeadline(headlinePack), expectedResult, 'Antifies correctly.'
-    );
-  }
+  runTransformOnTestCases(t, antifyHeadline, testCases);
 });
