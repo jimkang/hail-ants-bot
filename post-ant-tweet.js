@@ -28,7 +28,7 @@ if (process.argv.length > 2) {
 }
 
 var twit = new Twit(config.twitter);
-var usedDb = level(__dirname + '/data/used.db');
+var usedDb = level(__dirname + '/data/' + config.usedHeadlinesDbName);
 
 var seed = (new Date()).toISOString();
 console.log('seed:', seed);
