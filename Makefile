@@ -4,6 +4,9 @@ GITDIR = /var/repos/hail-ants-bot.git
 run:
 	node post-ant-tweet.js
 
+run-snake-people:
+	CONFIG="snake-people/snake-people-config" node post-ant-tweet.js --dry
+
 test:
 	node tests/antify-headline-tests.js
 
