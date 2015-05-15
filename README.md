@@ -8,7 +8,7 @@ Installation
 
 Clone this repo.
 
-Then, create a `config.js` file in the project root that contains [Twitter API keys](https://gist.github.com/jimkang/34d16247b40097d8cace) and [Wordnik API key](http://developer.wordnik.com/). Example:
+Then, create a `your-config.js` file that contains [Twitter API keys](https://gist.github.com/jimkang/34d16247b40097d8cace) and paths to the modules it should use. Example:
 
     module.exports = {
       twitter: {
@@ -16,13 +16,31 @@ Then, create a `config.js` file in the project root that contains [Twitter API k
         consumer_secret: 'asdfasdjfbkjqwhbefubvskjhfbgasdjfhgaksjdhfgaksdxvc',
         access_token: '9999999999-zxcvkljhpoiuqwerkjhmnb,mnzxcvasdklfhwer',
         access_token_secret: 'opoijkljsadfbzxcnvkmokwertlknfgmoskdfgossodrh'
+      },
+      modulePaths: {
+        transformHeadlines: './antify-headlines',
+        rateHeadlines: './rate-headlines',
+        createTopicGetter: './topic-getter'
       }
     };
+
+
+`transformHeadlines` should export a function that takes an array of headlines and a callback, and calls the callback with any error and the transformed headlines. (See `antify-headlines` for an example.)
+
+`rateHeadlines` should export a function that takes an array of headlines and a callback, and calls the callback with any error and an array of objects, each with the headline and a `rating` integer. Higher is usually better. (See `rate-headlines` for an example.)
+
+`createTopicGetter` should export a function that takes an `opts` object and returns a function that will pick a topic to retrieve headlines for. The only property of `opts` that is set so far is `seed`, which createTopicGetter can use to seed randomizers. (See `topic-getter` for an example.)
 
 Usage
 -----
 
     make run
+
+Or:
+
+    CONFIG=<the relative path to your config file> node post-ant-tweet.js
+
+You can also pass a `--dry` switch to make it just print whatever it would have tweeted without actually tweeting it.
 
 Tests
 -----

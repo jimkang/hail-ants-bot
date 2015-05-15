@@ -1,15 +1,26 @@
-var config = require('./config');
 var callNextTick = require('call-next-tick');
 var Twit = require('twit');
 var async = require('async');
 var google = require('google');
 var _ = require('lodash');
-var antifyHeadlines = require('./antify-headlines');
-var rateHeadlines = require('./rate-headlines');
 var pickHeadline = require('./pick-headline');
 var level = require('level');
 var toTitleCase = require('titlecase');
-var createTopicGetter = require('./topic-getter');
+
+var configPath;
+
+if (process.env.CONFIG) {
+  configPath = './' + process.env.CONFIG
+}
+else {
+  configPath = './config';
+}
+
+var config = require(configPath);
+
+var transformHeadlines = require(config.modulePaths.transformHeadlines);
+var rateHeadlines = require(config.modulePaths.rateHeadlines);
+var createTopicGetter = require(config.modulePaths.createTopicGetter);
 
 var dryRun = false;
 if (process.argv.length > 2) {
@@ -29,7 +40,7 @@ async.waterfall(
   [
     fetchHeadlines,
     parseHeadlines,
-    antifyHeadlines,
+    transformHeadlines,
     rateHeadlines,
     _.curry(pickHeadline)(usedDb),
     saveUsedHeadline,
