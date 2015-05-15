@@ -4,13 +4,15 @@ function createTransformHeadline(opts) {
     regexSpecs = opts.regexSpecs;
   }
 
-  return function transformHeadline(headline) {
-    return regexSpecs.reduce(applyRegexSpec, headline);
+  return function transformHeadline(headlinePack) {
+    return regexSpecs.reduce(applyRegexSpec, headlinePack);
   }
 }
 
-function applyRegexSpec(headline, regexSpec) {
-  return headline.replace(regexSpec.regex, regexSpec.replacement);
+function applyRegexSpec(headlinePack, regexSpec) {
+  headlinePack.headline = headlinePack.headline
+    .replace(regexSpec.regex, regexSpec.replacement);
+  return headlinePack;
 }
 
 module.exports = createTransformHeadline;

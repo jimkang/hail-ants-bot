@@ -24,7 +24,7 @@ module.exports = [
     score: 5
   },
   {
-    regex: /ant/i,
+    regex: /china|iran/i,
     score: 1
   },
   {

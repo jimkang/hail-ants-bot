@@ -33,7 +33,7 @@ module.exports = [
   },
   {
     regex: /in (?:china|iran)/ig,
-    replacement: 'in ant custody'
+    replacement: 'in ant tunnels'
   },
   {
     regex: /(?:china|iran) (\w+)es(\W)/ig,

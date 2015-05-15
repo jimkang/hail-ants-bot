@@ -40,8 +40,8 @@ async.waterfall(
   [
     fetchHeadlines,
     parseHeadlines,
-    transformHeadlines,
     rateHeadlines,
+    transformHeadlines,
     _.curry(pickHeadline)(usedDb),
     saveUsedHeadline,
     postTweet
