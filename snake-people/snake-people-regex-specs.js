@@ -20,13 +20,13 @@ module.exports = [
 
   // the great recession 
   {
-    regex: /\bgreat recession\b/ig,
-    replacement: "time of shedding and cold rocks"
+    regex: /([\W-])(great )?recession\b/ig,
+    replacement: "$1time of shedding and cold rocks"
   },
 
   // the great depression
   {
-    regex: /\bgreat depression\b/ig,
+    regex: /\b(?:great )depression\b/ig,
     replacement: "clutch plague"
   },
 
@@ -264,5 +264,11 @@ module.exports = [
   {
     regex: /\bgeneration precarious\b/ig,
     replacement: "gargouille"
+  },
+
+  // Young Americans
+  {
+    regex: /\bYoung American/ig,
+    replacement: "ophidian moultling"
   }
 ];

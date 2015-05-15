@@ -83,6 +83,10 @@ test('Snake people', function snakePeople(t) {
     {
       headline: 'Motherlode | Free Range vs. Helicopter Parenting: Get the Facts',
       replacement: 'Motherlode | thoth-amon vs. thulsa doom Parenting: Get the Facts'
+    },
+    {
+      headline: 'For Young Americans, Unemployment Returns to Pre-Recession Levels',
+      replacement: 'For ophidian moultlings, Unemployment Returns to Pre-time of shedding and cold rocks Levels'
     }
   ];
 
