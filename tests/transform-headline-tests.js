@@ -1,6 +1,7 @@
 var test = require('tape');
 var createTransformHeadline = require('../transform-headline');
 var antRegexSpecs = require('../data/ant-regex-specs');
+var snakePeopleRegexSpecs = require('../snake-people/snake-people-regex-specs');
 
 function runTransformOnTestCases(t, transformFn, testCases)  {
   t.plan(testCases.length);
@@ -16,7 +17,7 @@ function runTransformOnTestCases(t, transformFn, testCases)  {
     };
 
     t.deepEqual(
-      transformFn(headlinePack), expectedResult, 'Antifies correctly.'
+      transformFn(headlinePack), expectedResult, 'Transforms correctly.'
     );
   }
 }
@@ -59,4 +60,23 @@ test('Pluralization', function pluralization(t) {
   });
 
   runTransformOnTestCases(t, antifyHeadline, testCases);
+});
+
+test('Snake people', function snakePeople(t) {
+  var testCases = [
+    {
+      headline: 'Echo Boomers Will Have Oversized Impact on Retail, Real Estate',
+      replacement: 'Crotalids Will Have Oversized Impact on Retail, Real Estate'
+    },
+    {
+      headline: 'Here Comes the Echo Boomer to Save the Housing Market',
+      replacement: 'Here Comes the Crotalid to Save the Housing Market'
+    }
+  ];
+
+  var snakifyHeadline = createTransformHeadline({
+    regexSpecs: snakePeopleRegexSpecs
+  });
+
+  runTransformOnTestCases(t, snakifyHeadline, testCases);
 });
