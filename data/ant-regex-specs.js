@@ -20,6 +20,10 @@ module.exports = [
     replacement: 'ants'
   },
   {
+    regex: /(china|iran|chinese|iranian) (b|m|tr)illionaire/ig,
+    replacement: 'ant colony'
+  },
+  {
     regex: /(?:chinese|iranian)/ig,
     replacement: 'ant'
   },

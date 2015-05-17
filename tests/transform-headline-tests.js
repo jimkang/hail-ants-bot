@@ -52,6 +52,10 @@ test('Pluralization', function pluralization(t) {
     {
       headline: 'China imposes smartwatch and wearable tech army ban',
       replacement: 'ant hive mind imposes smartwatch and wearable tech army ban',
+    },
+    {
+      headline: 'Chinese Billionaire grabs $8 million contract',
+      replacement: 'ant colony grabs $8 million contract',
     }
   ];
 
