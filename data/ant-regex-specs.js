@@ -1,11 +1,15 @@
 module.exports = [
   {
-    regex: /(?:china|iran)\'s (?:military|forest|government|central bank) (\w+)s/ig,
+    regex: /(?:china|iran)\'s (?:military|forest|government|parliament|central bank) (\w+)s/ig,
     replacement: 'ants $1'
   },
   {
-    regex: /the (?:chinese|iranian) military is/ig,
+    regex: /(?:the)* (?:chinese|iranian) (?:military|forest|government|parliament|central bank) is/ig,
     replacement: 'ants are'
+  },
+  {
+    regex: /(?:chinese|iranian) (?:military|forest|government|parliament|central bank) (also )*wants/ig,
+    replacement: 'ants $1want'
   },
   {
     regex: /(?:china\'s|iran\'s)/ig,
@@ -16,7 +20,7 @@ module.exports = [
     replacement: 'an ant'
   },
   {
-    regex: /(?:chinese|iranian) (?:students|sailors|people|hardliners)/ig,
+    regex: /(?:chinese|iranian) (?:students|sailors|people|hardliners|banks)/ig,
     replacement: 'ants'
   },
   {

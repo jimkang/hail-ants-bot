@@ -56,6 +56,14 @@ test('Pluralization', function pluralization(t) {
     {
       headline: 'Chinese Billionaire grabs $8 million contract',
       replacement: 'ant colony grabs $8 million contract',
+    },
+    {
+      headline: 'Iranian Parliament Also Wants a Say on Nuclear Deal',
+      replacement: 'ants Also want a Say on Nuclear Deal'
+    },
+    {
+      headline: 'Iranian Parliament Wants a Say on Nuclear Deal',
+      replacement: 'ants want a Say on Nuclear Deal'
     }
   ];
 
