@@ -20,7 +20,7 @@ module.exports = [
     replacement: 'an ant'
   },
   {
-    regex: /(?:chinese|iranian) (?:students|sailors|people|hardliners|banks)/ig,
+    regex: /(?:chinese|iranian) (?:students|sailors|people|hardliners|banks|brands)/ig,
     replacement: 'ants'
   },
   {
