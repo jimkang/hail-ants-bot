@@ -1,11 +1,11 @@
 var callNextTick = require('call-next-tick');
 var Twit = require('twit');
 var async = require('async');
-var google = require('google');
 var _ = require('lodash');
 var pickHeadline = require('./pick-headline');
 var level = require('level');
 var toTitleCase = require('titlecase');
+var fetchHeadlines = require('./fetch-headlines');
 
 var configPath;
 
@@ -38,6 +38,7 @@ var getTopic = createTopicGetter({
 
 async.waterfall(
   [
+    getTopic,
     fetchHeadlines,
     parseHeadlines,
     rateHeadlines,
@@ -48,24 +49,6 @@ async.waterfall(
   ],
   wrapUp
 );
-
-function fetchHeadlines(done) {
-  google.resultsPerPage = 20;
-  var topic = getTopic();
-  console.log('topic', topic);
-
-  google.requestOptions = {
-    qs: {
-      hl: 'en',
-      gl: 'us',
-      tbm: 'nws',
-      authuser: 0,
-      q: topic,
-      num: 50
-    }
-  };
-  google(null, done);
-}
 
 function parseHeadlines(next, links, done) {
   callNextTick(done, null, _.pluck(links, 'title'));

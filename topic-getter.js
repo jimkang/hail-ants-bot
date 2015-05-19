@@ -1,5 +1,6 @@
 var createProbable = require('probable').createProbable;
 var seedrandom = require('seedrandom');
+var callNextTick = require('call-next-tick');
 
 function createTopicGetter(opts) {
   var seed;
@@ -23,7 +24,11 @@ function createTopicGetter(opts) {
     }
   });
 
-  return table.roll;
+  function getTopic(done) {
+    callNextTick(done, null, table.roll());
+  }
+  
+  return getTopic;
 }
 
 module.exports = createTopicGetter;
