@@ -40,7 +40,6 @@ async.waterfall(
   [
     getTopic,
     fetchHeadlines,
-    parseHeadlines,
     rateHeadlines,
     transformHeadlines,
     _.curry(pickHeadline)(usedDb),
@@ -49,10 +48,6 @@ async.waterfall(
   ],
   wrapUp
 );
-
-function parseHeadlines(next, links, done) {
-  callNextTick(done, null, _.pluck(links, 'title'));
-}
 
 function saveUsedHeadline(ratedHeadline, done) {
   usedDb.put(ratedHeadline.headline.toLowerCase(), seed, putDone);

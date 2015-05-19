@@ -1,5 +1,6 @@
 var createProbable = require('probable').createProbable;
 var seedrandom = require('seedrandom');
+var callNextTick = require('call-next-tick');
 
 function createSnakePeopleTopicGetter(opts) {
   var seed;
@@ -46,7 +47,11 @@ function createSnakePeopleTopicGetter(opts) {
     }
   });
 
-  return table.roll;
+  function getTopic(done) {
+    callNextTick(done, null, table.roll());
+  }
+
+  return getTopic;
 }
 
 module.exports = createSnakePeopleTopicGetter;
