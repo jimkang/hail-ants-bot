@@ -19,7 +19,7 @@ function fetchHeadlines(topic, done) {
 
     while ((item = stream.read())) {
       if (item && item.title) {
-        titles.push(item.title);
+        titles.push(trimSiteFromTitle(item.title));
       }
     }
   }
@@ -41,6 +41,16 @@ function fetchHeadlines(topic, done) {
 
   function passBackTitles() {
     done(null, titles);
+  }
+}
+
+function trimSiteFromTitle(title) {
+  var parts = title.split(' - ');
+  if (parts.length < 2) {
+    return title;
+  }
+  else {
+    return parts.slice(0, parts.length - 1).join(' - ');
   }
 }
 
