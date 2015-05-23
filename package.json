@@ -25,6 +25,7 @@
     "call-next-tick": "^1.1.2",
     "feedparser": "^1.0.1",
     "google": "^1.1.0",
+    "iscool": "^1.1.2",
     "jsonfile": "^2.0.0",
     "level": "^0.19.1",
     "lodash": "^3.8.0",

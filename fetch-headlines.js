@@ -1,5 +1,37 @@
 var FeedParser = require('feedparser');
 var request = require('request');
+var createIsCool = require('iscool');
+var _  = require('lodash');
+
+var isCool = createIsCool({
+  customWhitelist: [
+    'gaza',
+    'israel',
+    'palestine',
+    'invasion',
+    'plane',
+    'missile',
+    'airstrike',
+    'brigadier',
+    'idf',
+    'isis',
+    'iraq',
+    'accident',
+    'depression',
+    'gun',
+    'ukraine',
+    'jihad',
+    'cop',
+    'police',
+    'officer',
+    'nepal',
+    'katmandu',
+    'gray',
+    'train',
+    'philadelphia'
+  ],
+  falsePositives: []
+});
 
 function fetchHeadlines(topic, done) {
   var titles = [];
@@ -18,7 +50,7 @@ function fetchHeadlines(topic, done) {
     var item;
 
     while ((item = stream.read())) {
-      if (item && item.title) {
+      if (item && item.title && titleIsCool(item.title)) {
         titles.push(trimSiteFromTitle(item.title));
       }
     }
@@ -52,6 +84,11 @@ function trimSiteFromTitle(title) {
   else {
     return parts.slice(0, parts.length - 1).join(' - ');
   }
+}
+
+function titleIsCool(title) {
+  var words = _.compact(title.split(/\W/));
+  return words.every(isCool);
 }
 
 module.exports = fetchHeadlines;

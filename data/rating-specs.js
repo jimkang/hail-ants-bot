@@ -4,6 +4,10 @@ module.exports = [
     score: 5
   },
   {
+    regex: /drone/i,
+    score: 5
+  },
+  {
     regex: /bank|currenc|econom/i,
     score: 5
   },

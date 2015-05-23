@@ -21,7 +21,8 @@ function createTopicGetter(opts) {
     '40-69': {
       '0-2': 'iranian',
       '3-4': 'iran'
-    }
+    },
+    '70-89': 'drones'
   });
 
   function getTopic(done) {
