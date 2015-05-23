@@ -7,18 +7,46 @@ module.exports = [
     regex: /drone(-use)?/ig,
     replacement: 'flying ant'
   },
+
   {
-    regex: /(?:china|iran)\'s (?:military|forest|government|parliament|central bank) (\w+)s/ig,
+    regex: /(?:china|iran)\'s (?:military) (\w+)s/ig,
+    replacement: 'army ants $1'
+  },
+  {
+    regex: /(?:the )*(?:chinese|iranian) (?:military) is/ig,
+    replacement: 'army ants are'
+  },
+  {
+    regex: /(?:chinese|iranian|china|iran) (?:military) (also )*wants/ig,
+    replacement: 'army ants $1want'
+  },
+  {
+    regex: /(?:the )*(?:chinese|iranian) (?:military)/ig,
+    replacement: 'army ants'
+  },
+
+  {
+    regex: /(?:china|iran)\'s (?:forest|government|parliament|central bank) (\w+)s/ig,
     replacement: 'ants $1'
   },
   {
-    regex: /(?:the)* (?:chinese|iranian) (?:military|forest|government|parliament|central bank) is/ig,
+    regex: /(?:the )*(?:chinese|iranian) (?:forest|government|parliament|central bank) is/ig,
     replacement: 'ants are'
   },
   {
-    regex: /(?:chinese|iranian|china|iran) (?:military|forest|government|parliament|central bank) (also )*wants/ig,
+    regex: /(?:chinese|iranian|china|iran) (?:forest|government|parliament|central bank) (also )*wants/ig,
     replacement: 'ants $1want'
   },
+  {
+    regex: /(?:chinese|iranian|china|iran) (?:forest|government|parliament|central bank)/ig,
+    replacement: 'ants'
+  },
+
+  {
+    regex: /Taiwan|Taiwanese/ig,
+    replacement: 'termites'
+  },
+
   {
     regex: /(?:china\'s|iran\'s)/ig,
     replacement: 'ants\''
