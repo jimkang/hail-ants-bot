@@ -118,9 +118,9 @@ module.exports = [
     replacement: "cult of the caduceus "
   },
 
-  // generation me
+  // generation me/Z
   {
-    regex: /\bgeneration me\b/ig,
+    regex: /\bgeneration (me|z)\b/ig,
     replacement: "the cult of the serpent"
   },
 
