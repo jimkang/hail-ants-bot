@@ -88,6 +88,10 @@ module.exports = [
     replacement: 'ant hive mind $1$2'
   },
   {
+    regex: /xi jinping/ig,
+    replacement: 'hive mind'
+  },
+  {
     regex: /(?:china|iran)/ig,
     replacement: 'ants'
   }
