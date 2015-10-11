@@ -5,7 +5,7 @@ var _ = require('lodash');
 var pickHeadline = require('./pick-headline');
 var level = require('level');
 var toTitleCase = require('titlecase');
-var fetchHeadlines = require('./fetch-headlines');
+var filteredFetchHeadlines = require('./filtered-fetch-headlines');
 
 var configPath;
 
@@ -39,7 +39,7 @@ var getTopic = createTopicGetter({
 async.waterfall(
   [
     getTopic,
-    fetchHeadlines,
+    filteredFetchHeadlines,
     rateHeadlines,
     transformHeadlines,
     _.curry(pickHeadline)(usedDb),

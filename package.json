@@ -23,14 +23,13 @@
   "dependencies": {
     "async": "^0.9.0",
     "call-next-tick": "^1.1.2",
-    "feedparser": "^1.0.1",
+    "fetch-headlines": "^1.0.0",
     "google": "^1.1.0",
     "iscool": "^1.1.2",
     "jsonfile": "^2.0.0",
     "level": "^0.19.1",
     "lodash": "^3.8.0",
     "probable": "^1.6.0",
-    "request": "^2.55.0",
     "seedrandom": "^2.4.0",
     "titlecase": "^1.0.2",
     "twit": "^1.1.20"
