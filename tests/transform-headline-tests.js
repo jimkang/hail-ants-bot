@@ -64,6 +64,10 @@ test('Pluralization', function pluralization(t) {
     {
       headline: 'Iranian Parliament Wants a Say on Nuclear Deal',
       replacement: 'ants want a Say on Nuclear Deal'
+    },
+    {
+      headline: 'China\'s Xi Jinping Says Poverty Is \'Nothing to Fear\' After Pesticide Deaths',
+      replacement: 'ants\' hive mind Says Poverty Is \'Nothing to Fear\' After Pesticide Deaths'
     }
   ];
 
