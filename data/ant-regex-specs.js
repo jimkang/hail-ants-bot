@@ -1,11 +1,11 @@
 module.exports = [
   {
     regex: /(?:U\.?S\.?|China|Iran|American) drones/ig,
-    replacement: 'flying ants'
+    replacement: 'bees'
   },
   {
     regex: /drone(-use)?/ig,
-    replacement: 'flying ant'
+    replacement: 'bee'
   },
 
   {
