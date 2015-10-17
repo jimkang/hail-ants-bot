@@ -60,6 +60,10 @@ module.exports = [
     score: 1
   },
   {
+    regex: /digital native/i,
+    score: 2
+  },
+  {
     regex: /employ|work|career/i,
     score: 2
   },

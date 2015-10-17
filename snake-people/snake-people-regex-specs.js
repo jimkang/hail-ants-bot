@@ -108,6 +108,116 @@ module.exports = [
     replacement: "plissken faction"
   },
 
+  // millennialism
+  {
+    regex: /\bMillennialism\b/g,
+    replacement: "Reptilianism"
+  },
+  {
+    regex: /\bmillennialism\b/g,
+    replacement: "reptilianism"
+  },
+
+  //  Gendered Millennials
+  {
+    regex: /\bMillennial (M|m)(e|a)n('s)?\b/g,
+    replacement: "Snake $1$2n$3"
+  },
+  {
+    regex: /\bmillennial m(e|a)n('s)?\b/g,
+    replacement: "snake m$1n$2"
+  },
+  {
+    regex: /\bMillennial (B|b)oy('s|s(?:')?)?\b/g,
+    replacement: "Snake $1oy$2"
+  },
+  {
+    regex: /\bmillennial boy('s|s(?:')?)?\b/g,
+    replacement: "snake boy$1"
+  },
+  {
+    regex: /\bMillennial (G|g)uy('s|s(?:')?)?\b/g,
+    replacement: "Snake $1uy$2"
+  },
+  {
+    regex: /\bmillennial guy('s|s(?:')?)?\b/g,
+    replacement: "snake guy$1"
+  },
+  {
+    regex: /\bMillennial (W|w)om(e|a)n('s)?\b/g,
+    replacement: "Snake $1om$2n$3"
+  },
+  {
+    regex: /\bmillennial wom(e|a)n('s)?\b/g,
+    replacement: "snake wom$1n$2"
+  },
+  {
+    regex: /\bMillennial (G|g)irl('s|s(?:')?)?\b/g,
+    replacement: "Snake $1irl$2"
+  },
+  {
+    regex: /\bmillennial girl('s|s(?:')?)?\b/g,
+    replacement: "snake girl$1"
+  },
+  {
+    regex: /\bMillennial (G|g)al('s|s(?:')?)?\b/g,
+    replacement: "Snake $1al$2"
+  },
+  {
+    regex: /\bmillennial gal('s|s(?:')?)?\b/g,
+    replacement: "snake gal$1"
+  },
+
+  //  Aged Millennials
+  {
+    regex: /\bMillennial Child('s)?\b/g,
+    replacement: "Snakelet$1"
+  },
+  {
+    regex: /\b[Mm]illennial child('s)?\b/g,
+    replacement: "snakelet$1"
+  },
+  {
+    regex: /\bMillennial Children(?:(')s)?\b/g,
+    replacement: "Snakelets$1"
+  },
+  {
+    regex: /\b[Mm]illennial children(?:(')s)?\b/g,
+    replacement: "snakelets$1"
+  },
+  {
+    regex: /\bMillennial [Tt]een(?:ager)?('s)?\b/g,
+    replacement: "proto-Snake Person$1"
+  },
+  {
+    regex: /\bmillennial teen(?:ager)?('s)?\b/g,
+    replacement: "proto-snake person$1"
+  },
+  {
+    regex: /\bMillennial [Tt]een(?:ager)?(?:(s)\b(')|s\b)/g,
+    replacement: "proto-Snake People$2$1"
+  },
+  {
+    regex: /\bmillennial teen(?:ager)?(?:(s)\b(')|s\b)/g,
+    replace: "proto-snake people$2$1"
+  },
+  {
+    regex: /\bMillennial (A|a)dult('s)?\b/g,
+    replacement: "$1dult Snake Person$2"
+  },
+  {
+    regex: /\bmillennial adult('s)?\b/g,
+    replacement: "adult snake person$1"
+  },
+  {
+    regex: /\bMillennial (A|a)dult(?:(s)\b(')|s\b)/g,
+    replacement: "$1dult Snake People$3$2"
+  },
+  {
+    regex: /\bmillennial adult(?:(s)\b(')|s\b)/g,
+    replacement: "adult snake people$2$1"
+  },
+
   // generation we
   {
     regex: /\bgeneration we\b/ig,
@@ -270,5 +380,16 @@ module.exports = [
   {
     regex: /\bYoung American/ig,
     replacement: "ophidian moultling"
-  }
+  },
+
+  // Bonus
+  {
+    regex: /(?:U\.?S\.?|China|Iran|American) drones/ig,
+    replacement: 'bees'
+  },
+  {
+    regex: /drone(-use)?/ig,
+    replacement: 'bee'
+  }  
+
 ];
