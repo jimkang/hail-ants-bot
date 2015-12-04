@@ -10,7 +10,7 @@ function rankByRating(a, b) {
 }
 
 function pickFirstUnused(usedDb, ratedHeadlines, done) {
-  async.detect(
+  async.detectSeries(
     ratedHeadlines.filter(headlineExists), headlineIsUnused, reportResult
   );
 
