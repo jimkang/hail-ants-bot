@@ -7,6 +7,18 @@ module.exports = [
     regex: /drone(-use)?/ig,
     replacement: 'bee'
   },
+  {
+    regex: /quadcopter/ig,
+    replacement: 'wasp'
+  },
+  {
+    regex: /UAV/g,
+    replacement: 'Apoidea'
+  },
+  {
+    regex: /model aircraft/ig,
+    replacement: 'honey bees'
+  },
 
   {
     regex: /(?:china|iran)\'s (?:military) (\w+)s/ig,
