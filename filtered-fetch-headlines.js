@@ -1,5 +1,6 @@
 var createIsCool = require('iscool');
 var fetchHeadlines = require('fetch-headlines');
+var _ = require('lodash');
 
 var isCool = createIsCool({
   customWhitelist: [
@@ -31,12 +32,10 @@ var isCool = createIsCool({
   falsePositives: []
 });
 
-function filteredFetchHeadlines(topic, done) {
-  var opts = {
-    topic: topic,
-    isCool: isCool
-  };
-  fetchHeadlines(opts, done);
+function filteredFetchHeadlines(opts, done) {
+  var fetchOpts = _.clone(opts);
+  fetchOpts.isCool = isCool;
+  fetchHeadlines(fetchOpts, done);
 }
 
 module.exports = filteredFetchHeadlines;

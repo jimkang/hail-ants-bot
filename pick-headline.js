@@ -47,4 +47,3 @@ function headlineExists(headlinePack) {
 }
 
 module.exports = pickHeadline;
-

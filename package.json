@@ -23,7 +23,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "call-next-tick": "^1.1.2",
-    "fetch-headlines": "^1.0.0",
+    "fetch-headlines": "^3.0.0",
     "google": "^1.1.0",
     "iscool": "^1.1.10",
     "jsonfile": "^2.0.0",

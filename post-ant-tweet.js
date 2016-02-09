@@ -6,6 +6,7 @@ var pickHeadline = require('./pick-headline');
 var level = require('level');
 var toTitleCase = require('titlecase');
 var filteredFetchHeadlines = require('./filtered-fetch-headlines');
+var probable = require('probable');
 
 var configPath;
 
@@ -39,7 +40,7 @@ var getTopic = createTopicGetter({
 async.waterfall(
   [
     getTopic,
-    filteredFetchHeadlines,
+    runFilteredFetchHeadlines,
     rateHeadlines,
     transformHeadlines,
     _.curry(pickHeadline)(usedDb),
@@ -48,6 +49,19 @@ async.waterfall(
   ],
   wrapUp
 );
+
+function runFilteredFetchHeadlines(topic, done) {
+  var opts = {
+    topic: topic,
+    twit: twit
+  };
+
+  if (config.headlineSources) {
+    opts.source = probable.pickFromArray(config.headlineSources);
+  }
+
+  filteredFetchHeadlines(opts, done);
+}
 
 function saveUsedHeadline(ratedHeadline, done) {
   usedDb.put(ratedHeadline.headline.toLowerCase(), seed, putDone);
