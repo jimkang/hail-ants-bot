@@ -8,7 +8,19 @@ module.exports = [
     score: 5
   },
   {
+    regex: /ReactJS/i,
+    score: 2
+  },
+  {
     regex: /Hadoop/i,
+    score: 5
+  },
+  {
+    regex: /MVC/i,
+    score: 5
+  },
+  {
+    regex: /model view controller/i,
     score: 5
   },
   {

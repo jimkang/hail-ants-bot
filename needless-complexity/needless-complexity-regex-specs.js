@@ -12,6 +12,10 @@ module.exports = [
     regex: /\bAngular\.?(?:JS)?/ig,
     replacement: "needless complexity"
   },
+  {
+    regex: /\dependency injection/ig,
+    replacement: "magic that's just going to upset you later"
+  },
 
   // ReactJS
   {
@@ -31,6 +35,19 @@ module.exports = [
   {
     regex: /\bHadoop/ig,
     replacement: 'needless complexity'
+  },
+
+  // MVC
+  {
+    regex: /\b(MVC)|(model view controller)/ig,
+    replacement: 'the one mold we shove everything into'
+  },
+  {
+    regex: /\bmodel/ig,
+    replacement: 'miscellaneous code bucket'
+  },
+  {
+    regex: /\bcontroller/ig,
+    replacement: 'the part we will make too large then feel bad about'
   }
-  
 ];
