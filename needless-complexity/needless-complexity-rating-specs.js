@@ -8,6 +8,10 @@ module.exports = [
     score: 5
   },
   {
+    regex: /Hadoop/i,
+    score: 5
+  },
+  {
     regex: /need/i,
     score: 1
   },
@@ -30,5 +34,5 @@ module.exports = [
   {
     regex: /why/i,
     score: 2
-  }
+  },
 ];

@@ -25,7 +25,12 @@ module.exports = [
   {
     regex: /\React\.?(?:JS)?/ig,
     replacement: "the new thing you'll adopt out of fear"
+  },
+
+  // Hadoop
+  {
+    regex: /\bHadoop/ig,
+    replacement: 'needless complexity'
   }
   
 ];
-
