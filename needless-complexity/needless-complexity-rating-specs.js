@@ -4,6 +4,10 @@ module.exports = [
     score: 5
   },
   {
+    regex: /React/i,
+    score: 5
+  },
+  {
     regex: /need/i,
     score: 1
   },
@@ -22,5 +26,9 @@ module.exports = [
   {
     regex: /gathering steam/i,
     score: 1
+  },
+  {
+    regex: /why/i,
+    score: 2
   }
 ];
