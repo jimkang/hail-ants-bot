@@ -27,7 +27,7 @@
     "google": "^1.1.0",
     "iscool": "^1.1.10",
     "jsonfile": "^2.0.0",
-    "level": "^0.19.1",
+    "level": "^1.4.0",
     "lodash": "^3.8.0",
     "probable": "^1.6.0",
     "seedrandom": "^2.4.0",

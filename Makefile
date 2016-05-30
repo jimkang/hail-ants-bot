@@ -1,5 +1,16 @@
 HOMEDIR = $(shell pwd)
-GITDIR = /var/repos/hail-ants-bot.git
+USER = bot
+SERVER = smidgeo
+SSHCMD = ssh $(USER)@$(SERVER)
+PROJECTNAME = hail-ants-bot
+APPDIR = /opt/$(PROJECTNAME)
+
+pushall: sync
+	git push origin master
+
+sync:
+	rsync -a $(HOMEDIR) $(USER)@$(SERVER):/opt --exclude node_modules/
+	$(SSHCMD) "cd $(APPDIR) && npm install"
 
 run:
 	node post-ant-tweet.js
@@ -12,16 +23,3 @@ run-needless-complexity:
 
 test:
 	node tests/transform-headline-tests.js
-
-sync-worktree-to-git:
-	git --work-tree=$(HOMEDIR) --git-dir=$(GITDIR) checkout -f
-
-npm-install:
-	cd $(HOMEDIR)
-	npm install
-	npm prune
-
-pushall:
-	git push origin master && git push server master
-
-post-receive: sync-worktree-to-git npm-install
