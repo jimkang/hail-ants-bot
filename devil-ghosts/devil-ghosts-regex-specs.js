@@ -18,7 +18,20 @@ module.exports = [
       'satanic',
       'occult'
     ]
-  },  
+  },
+  {
+    regex: /\ban algorithm/ig,
+    replacement: [
+      "a sacrificial ceremony",
+      "a devil",
+      "a demon",
+      "a ghost",
+      "a spirit",
+      "howling demons",
+      "dark magicks",
+      "unknowable magicks"
+    ]
+  },
   {
     regex: /\balgorithm/ig,
     replacement: [
