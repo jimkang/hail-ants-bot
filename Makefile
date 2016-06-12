@@ -21,5 +21,8 @@ run-snake-people:
 run-needless-complexity:
 	CONFIG="needless-complexity/needless-complexity-config" node post-ant-tweet.js
 
+run-devil-ghosts:
+	CONFIG="devil-ghosts/devil-ghosts-config" node post-ant-tweet.js
+
 test:
 	node tests/transform-headline-tests.js

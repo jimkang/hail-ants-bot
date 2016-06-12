@@ -1,4 +1,5 @@
 var _ = require('lodash');
+var probable = require('probable');
 
 function createTransformHeadline(opts) {
   var regexSpecs;
@@ -18,8 +19,14 @@ function createTransformHeadline(opts) {
 
 function applyRegexSpec(headlinePack, regexSpec) {
   var transformedPack = _.cloneDeep(headlinePack);
+
+  var replacement = regexSpec.replacement;
+  if (Array.isArray(replacement)) {
+    replacement = probable.pickFromArray(replacement);
+  }
+
   transformedPack.headline = headlinePack.headline
-    .replace(regexSpec.regex, regexSpec.replacement);
+    .replace(regexSpec.regex, replacement);
   return transformedPack;
 }
 
