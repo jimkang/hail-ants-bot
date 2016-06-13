@@ -42,5 +42,17 @@ module.exports = [
   {
     regex: /machine learning/i,
     score: 4
+  },
+  {
+    regex: /domina/i,
+    score: 3
+  },
+  {
+    regex: /human/i,
+    score: 5
+  },
+  {
+    regex: /trad/i,
+    score: 3
   }
 ];

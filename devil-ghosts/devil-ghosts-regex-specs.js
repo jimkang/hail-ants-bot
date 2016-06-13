@@ -9,14 +9,24 @@ module.exports = [
       "devils",
       "ghosts",
       "spirits",
-      "magicks"
+      "magicks",
+      'witchery'
     ]
   },
+  {
+    regex: /\ban algorithmic/ig,
+    replacement: [
+      'a satanic',
+      'an occult',
+      'a magickal'
+    ]
+  },  
   {
     regex: /\balgorithmic/ig,
     replacement: [
       'satanic',
-      'occult'
+      'occult',
+      'magickal'
     ]
   },
   {
@@ -40,20 +50,26 @@ module.exports = [
       "devil",
       "demon",
       "ghost",
-      "spirit",
+      "dark phantasm",
+      "extra-dimensional entity",
       "howling demons",
+      "horde of demons",
       "dark magicks",
-      "unknowable magicks"
+      "unknowable magicks",
+      "alchemy",
+      "inchoate subdimensional forces"
     ]
   },
   {
-    regex: /bigdata/ig,
+    regex: /big.?data/ig,
     replacement: [
-      'sacrificial pit'
+      'sacrificial pit',
+      'scrying pool',
+      'enormous wall of skulls'
     ]
   },
   {
-    regex: /machine learning/ig,
+    regex: /machine.learning/ig,
     replacement: [
       'extraplanar scrying',
       'psychic vivisection'
@@ -61,6 +77,28 @@ module.exports = [
   },
   {
     regex: /data/ig,
-    replacement: 'blood'
+    replacement: [
+      'blood',
+      'sigils'
+    ]
+  },
+  {
+    regex: /trading/ig,
+    replacement: 'possession'
+  },
+  {
+    regex: /trade/ig,
+    replacement: 'possession'
+  },
+  {
+    regex: /calculation/ig,
+    replacement: 'ritual'
   }
+  // {
+  //   regex: /human/ig,
+  //   replacement: [
+  //     'mortal',
+  //     'flesh unit'
+  //   ]
+  // }
 ];

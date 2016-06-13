@@ -64,7 +64,7 @@ function runFilteredFetchHeadlines(topic, done) {
 }
 
 function saveUsedHeadline(ratedHeadline, done) {
-  usedDb.put(ratedHeadline.headline.toLowerCase(), seed, putDone);
+  usedDb.put(ratedHeadline.originalHeadline.toLowerCase(), seed, putDone);
   function putDone(error) {
     if (error) {
       done(error);

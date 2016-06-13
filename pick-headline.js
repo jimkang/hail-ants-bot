@@ -30,12 +30,12 @@ function pickFirstUnused(usedDb, ratedHeadlines, done) {
 
   function headlineIsUnused(ratedHeadline, checkDone) {
     usedDb.get(
-      ratedHeadline.headline.toLowerCase(), reportWhetherHeadlineWasFound
+      ratedHeadline.originalHeadline.toLowerCase(), reportWhetherHeadlineWasFound
     );
 
     function reportWhetherHeadlineWasFound(error, value) {
       if (!error && value) {
-        console.log('Found ' + ratedHeadline.headline + ' already used.');
+        console.log('Found ' + ratedHeadline.originalHeadline + ' already used.');
       }
       checkDone(error && error.type === 'NotFoundError');
     }
