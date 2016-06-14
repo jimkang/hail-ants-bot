@@ -52,12 +52,11 @@ module.exports = [
       "ghost",
       "dark phantasm",
       "extra-dimensional entity",
-      "howling demons",
-      "horde of demons",
+      "demon horde",
       "dark magicks",
       "unknowable magicks",
       "alchemy",
-      "inchoate subdimensional forces"
+      "inchoate subdimensional force"
     ]
   },
   {
