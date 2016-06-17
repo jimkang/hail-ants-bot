@@ -60,11 +60,11 @@ module.exports = [
     ]
   },
   {
-    regex: /big.?data/ig,
+    regex: /big.data/ig,
     replacement: [
-      'sacrificial pit',
-      'scrying pool',
-      'enormous wall of skulls'
+      'sacrificial pits',
+      'scrying pools',
+      'towers of skulls'
     ]
   },
   {
@@ -78,7 +78,9 @@ module.exports = [
     regex: /data/ig,
     replacement: [
       'blood',
-      'sigils'
+      'sigils',
+      'skulls',
+      'souls'
     ]
   },
   {
@@ -92,6 +94,22 @@ module.exports = [
   {
     regex: /calculation/ig,
     replacement: 'ritual'
+  },
+  {
+    regex: /machine/ig,
+    replacement: [
+      'ghost',
+      'devil',
+      'spirit'
+    ]
+  },
+  {
+    regex: /computer/ig,
+    replacement: [
+      'wizard',
+      'witch',
+      'homonculus'
+    ]
   }
   // {
   //   regex: /human/ig,

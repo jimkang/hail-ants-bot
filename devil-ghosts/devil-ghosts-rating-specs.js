@@ -36,8 +36,12 @@ module.exports = [
     score: 4
   },
   {
-    regex: /bigdata/i,
-    score: 4
+    regex: /big\sdata/i,
+    score: 5
+  },
+  {
+    regex: /data/i,
+    score: 1
   },
   {
     regex: /machine learning/i,
@@ -53,6 +57,10 @@ module.exports = [
   },
   {
     regex: /trad/i,
+    score: 3
+  },
+  {
+    regex: /machine/i,
     score: 3
   }
 ];
