@@ -62,5 +62,21 @@ module.exports = [
   {
     regex: /machine/i,
     score: 3
+  },
+  {
+    regex: /cloud/i,
+    score: 2
+  },
+  {
+    regex: /IoT/i,
+    score: 2
+  },
+  {
+    regex: /internet of things/i,
+    score: 4
+  },
+  {
+    regex: /robot/i,
+    score: 3
   }
 ];

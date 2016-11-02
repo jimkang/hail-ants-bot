@@ -64,7 +64,8 @@ module.exports = [
     replacement: [
       'sacrificial pits',
       'scrying pools',
-      'towers of skulls'
+      'towers of skulls',
+      'mind-destroying void dimensions'
     ]
   },
   {
@@ -110,7 +111,39 @@ module.exports = [
       'witch',
       'homonculus'
     ]
-  }
+  },
+  {
+    regex: /cloud/ig,
+    replacement: [
+      'sacrifice wheel',
+      'blood cloud',
+      'ethereal plane',
+      'astral plane'
+    ]
+  },
+  {
+    regex: /IoT/g,
+    replacement: [
+      'raised dead',
+      'undead minions',
+    ]
+  },
+  {
+    regex: /internet of things/ig,
+    replacement: [
+      'animated skeletons',
+      'enthralled souls',
+      'undead hordes'
+    ]
+  },
+  {
+    regex: /robot/ig,
+    replacement: [
+      'golem',
+      'soul',
+      'witch-thrall'
+    ]
+  },
   // {
   //   regex: /human/ig,
   //   replacement: [
