@@ -40,8 +40,7 @@ function filteredFetchHeadlines(opts, done) {
   function stripAtsFromHeadlines(error, headlines) {
     if (error) {
       done(error);
-    }
-    else {
+    } else {
       done(error, headlines.map(stripAts).map(stripLinks));
     }
   }

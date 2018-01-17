@@ -3,7 +3,7 @@ var createTransformHeadline = require('../transform-headline');
 var antRegexSpecs = require('../data/ant-regex-specs');
 var snakePeopleRegexSpecs = require('../snake-people/snake-people-regex-specs');
 
-function runTransformOnTestCases(t, transformFn, testCases)  {
+function runTransformOnTestCases(t, transformFn, testCases) {
   t.plan(testCases.length);
 
   testCases.forEach(runTestCase);
@@ -17,7 +17,9 @@ function runTransformOnTestCases(t, transformFn, testCases)  {
     };
 
     t.deepEqual(
-      transformFn(headlinePack), expectedResult, 'Transforms correctly.'
+      transformFn(headlinePack),
+      expectedResult,
+      'Transforms correctly.'
     );
   }
 }
@@ -26,15 +28,16 @@ test('Pluralization', function pluralization(t) {
   var testCases = [
     {
       headline: 'Iran Stresses End-June Deadline as Nuclear Talks Press On',
-      replacement: 'ant hive mind Stresses End-June Deadline as Nuclear Talks Press On'
+      replacement:
+        'ant hive mind Stresses End-June Deadline as Nuclear Talks Press On'
     },
     {
       headline: 'ICICI Bank to Expand to China with Shanghai Branch',
       replacement: 'ICICI Bank to Expand to ants with Shanghai Branch'
     },
     {
-      headline: 'China\'s Violations Leave in Doubt Extension of US Nuke Pact',
-      replacement: 'ants\' Violations Leave in Doubt Extension of US Nuke Pact'
+      headline: "China's Violations Leave in Doubt Extension of US Nuke Pact",
+      replacement: "ants' Violations Leave in Doubt Extension of US Nuke Pact"
     },
     // TODO: When it actually parses parts of speech.
     // {
@@ -46,16 +49,18 @@ test('Pluralization', function pluralization(t) {
       replacement: 'ants Housing Market Shows Signs of Life'
     },
     {
-      headline: 'Kerry to tell China US committed to free South China Sea movement',
-      replacement: 'Kerry to tell ants US committed to free South ants Sea movement'
+      headline:
+        'Kerry to tell China US committed to free South China Sea movement',
+      replacement:
+        'Kerry to tell ants US committed to free South ants Sea movement'
     },
     {
       headline: 'China imposes smartwatch and wearable tech army ban',
-      replacement: 'ant hive mind imposes smartwatch and wearable tech army ban',
+      replacement: 'ant hive mind imposes smartwatch and wearable tech army ban'
     },
     {
       headline: 'Chinese Billionaire grabs $8 million contract',
-      replacement: 'ant colony grabs $8 million contract',
+      replacement: 'ant colony grabs $8 million contract'
     },
     {
       headline: 'Iranian Parliament Also Wants a Say on Nuclear Deal',
@@ -66,8 +71,10 @@ test('Pluralization', function pluralization(t) {
       replacement: 'ants want a Say on Nuclear Deal'
     },
     {
-      headline: 'China\'s Xi Jinping Says Poverty Is \'Nothing to Fear\' After Pesticide Deaths',
-      replacement: 'ants\' hive mind Says Poverty Is \'Nothing to Fear\' After Pesticide Deaths'
+      headline:
+        "China's Xi Jinping Says Poverty Is 'Nothing to Fear' After Pesticide Deaths",
+      replacement:
+        "ants' hive mind Says Poverty Is 'Nothing to Fear' After Pesticide Deaths"
     }
   ];
 
@@ -81,7 +88,8 @@ test('Pluralization', function pluralization(t) {
 test('Snake people', function snakePeople(t) {
   var testCases = [
     {
-      headline: 'Echo Boomers Will Have Oversized Impact on Retail, Real Estate',
+      headline:
+        'Echo Boomers Will Have Oversized Impact on Retail, Real Estate',
       replacement: 'crotalids Will Have Oversized Impact on Retail, Real Estate'
     },
     {
@@ -89,23 +97,31 @@ test('Snake people', function snakePeople(t) {
       replacement: 'Here Comes the crotalid to Save the Housing Market'
     },
     {
-      headline: 'Improving Millennials\' Financial Literacy With Mobile Technology',
-      replacement: 'Improving snake people\'s Financial Literacy With Mobile Technology'
+      headline:
+        "Improving Millennials' Financial Literacy With Mobile Technology",
+      replacement:
+        "Improving snake people's Financial Literacy With Mobile Technology"
     },
     {
-      headline: 'Free-Range vs. Helicopter: What Does It Mean to Be a Good Parent?',
-      replacement: 'thoth-amon vs. thulsa doom: What Does It Mean to Be a Good Parent?'
+      headline:
+        'Free-Range vs. Helicopter: What Does It Mean to Be a Good Parent?',
+      replacement:
+        'thoth-amon vs. thulsa doom: What Does It Mean to Be a Good Parent?'
     },
     {
-      headline: 'Motherlode | Free Range vs. Helicopter Parenting: Get the Facts',
-      replacement: 'Motherlode | thoth-amon vs. thulsa doom Parenting: Get the Facts'
+      headline:
+        'Motherlode | Free Range vs. Helicopter Parenting: Get the Facts',
+      replacement:
+        'Motherlode | thoth-amon vs. thulsa doom Parenting: Get the Facts'
     },
     {
-      headline: 'For Young Americans, Unemployment Returns to Pre-Recession Levels',
-      replacement: 'For ophidian moultlings, Unemployment Returns to Pre-time of shedding and cold rocks Levels'
+      headline:
+        'For Young Americans, Unemployment Returns to Pre-Recession Levels',
+      replacement:
+        'For ophidian moultlings, Unemployment Returns to Pre-time of shedding and cold rocks Levels'
     },
     {
-      headline: '\'Wikipedia Generation\' Reinvents the Workplace',
+      headline: "'Wikipedia Generation' Reinvents the Workplace",
       replacement: undefined
     }
   ];

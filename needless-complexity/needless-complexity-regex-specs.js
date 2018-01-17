@@ -1,53 +1,53 @@
 module.exports = [
   // AngularJS
   {
-    regex: /#angularjs/ig,
-    replacement: "#needlesscomplexity"
+    regex: /#angularjs/gi,
+    replacement: '#needlesscomplexity'
   },
   {
-    regex: /\bAngular\.?(?:JS)? 2/ig,
-    replacement: "A Rube Goldberg machine for web pages"
+    regex: /\bAngular\.?(?:JS)? 2/gi,
+    replacement: 'A Rube Goldberg machine for web pages'
   },
   {
-    regex: /\bAngular\.?(?:JS)?/ig,
-    replacement: "needless complexity"
+    regex: /\bAngular\.?(?:JS)?/gi,
+    replacement: 'needless complexity'
   },
   {
-    regex: /\dependency injection/ig,
+    regex: /\dependency injection/gi,
     replacement: "magic that's just going to upset you later"
   },
 
   // ReactJS
   {
-    regex: /#reactjs/ig,
-    replacement: "#newthingyoulladoptoutoffear"
-  },  
-  {
-    regex: /\ReactJS/ig,
-    replacement: "the latest spin of the hamster wheel"
+    regex: /#reactjs/gi,
+    replacement: '#newthingyoulladoptoutoffear'
   },
   {
-    regex: /\React\.?(?:JS)?/ig,
+    regex: /\ReactJS/gi,
+    replacement: 'the latest spin of the hamster wheel'
+  },
+  {
+    regex: /\React\.?(?:JS)?/gi,
     replacement: "the new thing you'll adopt out of fear"
   },
 
   // Hadoop
   {
-    regex: /\bHadoop/ig,
+    regex: /\bHadoop/gi,
     replacement: 'needless complexity'
   },
 
   // MVC
   {
-    regex: /\b(MVC)|(model view controller)/ig,
+    regex: /\b(MVC)|(model view controller)/gi,
     replacement: 'the one mold we shove everything into'
   },
   {
-    regex: /\bmodel/ig,
+    regex: /\bmodel/gi,
     replacement: 'miscellaneous code bucket'
   },
   {
-    regex: /\bcontroller/ig,
+    regex: /\bcontroller/gi,
     replacement: 'the part we will make too large then feel bad about'
   }
 ];

@@ -26,3 +26,6 @@ run-devil-ghosts:
 
 test:
 	node tests/transform-headline-tests.js
+
+prettier:
+	prettier --single-quote --write "**/*.js"

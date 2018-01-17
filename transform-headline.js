@@ -15,7 +15,7 @@ function createTransformHeadline(opts) {
       transformedPack.headline = undefined;
     }
     return transformedPack;
-  }
+  };
 }
 
 function applyRegexSpec(headlinePack, regexSpec) {
@@ -26,8 +26,10 @@ function applyRegexSpec(headlinePack, regexSpec) {
     replacement = probable.pickFromArray(replacement);
   }
 
-  transformedPack.headline = headlinePack.headline
-    .replace(regexSpec.regex, replacement);
+  transformedPack.headline = headlinePack.headline.replace(
+    regexSpec.regex,
+    replacement
+  );
   return transformedPack;
 }
 

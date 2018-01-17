@@ -13,7 +13,7 @@ function createDevilGhostsTopicGetter(opts) {
     random: seedrandom(seed)
   });
 
-  var table = probable.createTableFromDef({    
+  var table = probable.createTableFromDef({
     '0-24': 'algorithm',
     '25-39': 'algorithmic',
     '40-59': 'big data'

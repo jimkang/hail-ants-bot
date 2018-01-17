@@ -46,5 +46,5 @@ module.exports = [
   {
     regex: /why/i,
     score: 2
-  },
+  }
 ];

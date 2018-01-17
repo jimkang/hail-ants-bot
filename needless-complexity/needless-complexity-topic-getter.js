@@ -13,7 +13,7 @@ function createNeedlessComplexityTopicGetter(opts) {
     random: seedrandom(seed)
   });
 
-  var table = probable.createTableFromDef({    
+  var table = probable.createTableFromDef({
     '0-24': 'AngularJS',
     '25-39': 'ReactJS',
     '40-55': 'Hadoop',

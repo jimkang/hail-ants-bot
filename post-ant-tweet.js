@@ -1,3 +1,5 @@
+/* global process, __dirname */
+
 var callNextTick = require('call-next-tick');
 var Twit = require('twit');
 var async = require('async');
@@ -14,9 +16,8 @@ var randomId = require('idmaker').randomId;
 var configPath;
 
 if (process.env.CONFIG) {
-  configPath = './' + process.env.CONFIG
-}
-else {
+  configPath = './' + process.env.CONFIG;
+} else {
   configPath = './config';
 }
 
@@ -42,13 +43,13 @@ var createTopicGetter = require(config.modulePaths.createTopicGetter);
 
 var dryRun = false;
 if (process.argv.length > 2) {
-  dryRun = (process.argv[2].toLowerCase() == '--dry');
+  dryRun = process.argv[2].toLowerCase() == '--dry';
 }
 
 var twit = new Twit(config.twitter);
 var usedDb = level(__dirname + '/data/' + config.usedHeadlinesDbName);
 
-var seed = (new Date()).toISOString();
+var seed = new Date().toISOString();
 console.log('seed:', seed);
 var getTopic = createTopicGetter({
   seed: seed
@@ -85,8 +86,7 @@ function saveUsedHeadline(ratedHeadline, done) {
   function putDone(error) {
     if (error) {
       done(error);
-    }
-    else {
+    } else {
       done(error, ratedHeadline);
     }
   }
@@ -99,8 +99,7 @@ function postToTargets(ratedHeadline, done) {
   if (dryRun) {
     console.log('Would have tweeted:', text);
     callNextTick(done, null);
-  }
-  else {
+  } else {
     var q = queue();
     q.defer(postTweet, text);
     q.defer(postToArchive, text);
@@ -132,8 +131,7 @@ function wrapUp(error, data) {
     if (data) {
       console.log('data:', data);
     }
-  }
-  else if (!dryRun) {
+  } else if (!dryRun) {
     console.log('Tweeted:', data.text);
   }
 }

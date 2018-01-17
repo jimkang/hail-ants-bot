@@ -28,7 +28,7 @@ function createTopicGetter(opts) {
   function getTopic(done) {
     callNextTick(done, null, table.roll());
   }
-  
+
   return getTopic;
 }
 

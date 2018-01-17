@@ -4,63 +4,49 @@ module.exports = [
   //   replacement: "#devilghosts"
   // },
   {
-    regex: /\balgorithms\b/ig,
+    regex: /\balgorithms\b/gi,
+    replacement: ['devils', 'ghosts', 'spirits', 'magicks', 'witchery']
+  },
+  {
+    regex: /\ban algorithmic/gi,
+    replacement: ['a satanic', 'an occult', 'a magickal']
+  },
+  {
+    regex: /\balgorithmic/gi,
+    replacement: ['satanic', 'occult', 'magickal']
+  },
+  {
+    regex: /\ban algorithm/gi,
     replacement: [
-      "devils",
-      "ghosts",
-      "spirits",
-      "magicks",
-      'witchery'
+      'a sacrificial ceremony',
+      'a devil',
+      'a demon',
+      'a ghost',
+      'a spirit',
+      'howling demons',
+      'dark magicks',
+      'unknowable magicks'
     ]
   },
   {
-    regex: /\ban algorithmic/ig,
+    regex: /\balgorithm/gi,
     replacement: [
-      'a satanic',
-      'an occult',
-      'a magickal'
-    ]
-  },  
-  {
-    regex: /\balgorithmic/ig,
-    replacement: [
-      'satanic',
-      'occult',
-      'magickal'
-    ]
-  },
-  {
-    regex: /\ban algorithm/ig,
-    replacement: [
-      "a sacrificial ceremony",
-      "a devil",
-      "a demon",
-      "a ghost",
-      "a spirit",
-      "howling demons",
-      "dark magicks",
-      "unknowable magicks"
+      'occult ritual',
+      'sacrificial ceremony',
+      'devil',
+      'demon',
+      'ghost',
+      'dark phantasm',
+      'extra-dimensional entity',
+      'demon horde',
+      'dark magicks',
+      'unknowable magicks',
+      'alchemy',
+      'inchoate subdimensional force'
     ]
   },
   {
-    regex: /\balgorithm/ig,
-    replacement: [
-      "occult ritual",
-      "sacrificial ceremony",
-      "devil",
-      "demon",
-      "ghost",
-      "dark phantasm",
-      "extra-dimensional entity",
-      "demon horde",
-      "dark magicks",
-      "unknowable magicks",
-      "alchemy",
-      "inchoate subdimensional force"
-    ]
-  },
-  {
-    regex: /big.data/ig,
+    regex: /big.data/gi,
     replacement: [
       'sacrificial pits',
       'scrying pools',
@@ -69,51 +55,35 @@ module.exports = [
     ]
   },
   {
-    regex: /machine.learning/ig,
-    replacement: [
-      'extraplanar scrying',
-      'psychic vivisection'
-    ]
+    regex: /machine.learning/gi,
+    replacement: ['extraplanar scrying', 'psychic vivisection']
   },
   {
-    regex: /data/ig,
-    replacement: [
-      'blood',
-      'sigils',
-      'skulls',
-      'souls'
-    ]
+    regex: /data/gi,
+    replacement: ['blood', 'sigils', 'skulls', 'souls']
   },
   {
-    regex: /trading/ig,
+    regex: /trading/gi,
     replacement: 'possession'
   },
   {
-    regex: /trade/ig,
+    regex: /trade/gi,
     replacement: 'possession'
   },
   {
-    regex: /calculation/ig,
+    regex: /calculation/gi,
     replacement: 'ritual'
   },
   {
-    regex: /machine/ig,
-    replacement: [
-      'ghost',
-      'devil',
-      'spirit'
-    ]
+    regex: /machine/gi,
+    replacement: ['ghost', 'devil', 'spirit']
   },
   {
-    regex: /computer/ig,
-    replacement: [
-      'wizard',
-      'witch',
-      'homonculus'
-    ]
+    regex: /computer/gi,
+    replacement: ['wizard', 'witch', 'homonculus']
   },
   {
-    regex: /cloud/ig,
+    regex: /cloud/gi,
     replacement: [
       'sacrifice wheel',
       'blood cloud',
@@ -123,27 +93,16 @@ module.exports = [
   },
   {
     regex: /IoT/g,
-    replacement: [
-      'raised dead',
-      'undead minions',
-    ]
+    replacement: ['raised dead', 'undead minions']
   },
   {
-    regex: /internet of things/ig,
-    replacement: [
-      'animated skeletons',
-      'enthralled souls',
-      'undead hordes'
-    ]
+    regex: /internet of things/gi,
+    replacement: ['animated skeletons', 'enthralled souls', 'undead hordes']
   },
   {
-    regex: /robot/ig,
-    replacement: [
-      'golem',
-      'soul',
-      'witch-thrall'
-    ]
-  },
+    regex: /robot/gi,
+    replacement: ['golem', 'soul', 'witch-thrall']
+  }
   // {
   //   regex: /human/ig,
   //   replacement: [

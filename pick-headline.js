@@ -11,31 +11,37 @@ function rankByRating(a, b) {
 
 function pickFirstUnused(usedDb, ratedHeadlines, done) {
   async.detectSeries(
-    ratedHeadlines.filter(headlineExists), headlineIsUnused, reportResult
+    ratedHeadlines.filter(headlineExists),
+    headlineIsUnused,
+    reportResult
   );
 
   function reportResult(result) {
     if (!result) {
-      done(new Error('No result object passed to reportResult. ratedHeadlines:' +
-        JSON.stringify(ratedHeadlines, null, '  '))
+      done(
+        new Error(
+          'No result object passed to reportResult. ratedHeadlines:' +
+            JSON.stringify(ratedHeadlines, null, '  ')
+        )
       );
-    }
-    else if (result.rating < 3) {
+    } else if (result.rating < 3) {
       done(new Error('Could not find a well-rated headline.'));
-    }
-    else {
+    } else {
       done(null, result);
     }
   }
 
   function headlineIsUnused(ratedHeadline, checkDone) {
     usedDb.get(
-      ratedHeadline.originalHeadline.toLowerCase(), reportWhetherHeadlineWasFound
+      ratedHeadline.originalHeadline.toLowerCase(),
+      reportWhetherHeadlineWasFound
     );
 
     function reportWhetherHeadlineWasFound(error, value) {
       if (!error && value) {
-        console.log('Found ' + ratedHeadline.originalHeadline + ' already used.');
+        console.log(
+          'Found ' + ratedHeadline.originalHeadline + ' already used.'
+        );
       }
       checkDone(error && error.type === 'NotFoundError');
     }

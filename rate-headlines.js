@@ -23,8 +23,10 @@ function rateHeadlines(ratingSpecs, headlines, done) {
 
 // Shouldn't bother rating truncated headlines.
 function notTruncated(headline) {
-  return headline.indexOf('...') !== headline.length - 3 &&
-    headline.indexOf('…') !== headline.length - 1;
+  return (
+    headline.indexOf('...') !== headline.length - 3 &&
+    headline.indexOf('…') !== headline.length - 1
+  );
 }
 
 module.exports = rateHeadlines;
