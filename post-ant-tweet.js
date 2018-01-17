@@ -7,6 +7,9 @@ var level = require('level');
 var toTitleCase = require('titlecase');
 var filteredFetchHeadlines = require('./filtered-fetch-headlines');
 var probable = require('probable');
+var StaticWebArchiveOnGit = require('static-web-archive-on-git');
+var queue = require('d3-queue').queue;
+var randomId = require('idmaker').randomId;
 
 var configPath;
 
@@ -18,6 +21,20 @@ else {
 }
 
 var config = require(configPath);
+
+var staticWebStream = StaticWebArchiveOnGit({
+  config: config.github,
+  title: config.archiveName,
+  footerScript: `<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49491163-1', 'jimkang.com');
+  ga('send', 'pageview');
+</script>`,
+  maxEntriesPerPage: 50
+});
 
 var transformHeadlines = require(config.modulePaths.transformHeadlines);
 var rateHeadlines = require(config.modulePaths.rateHeadlines);
@@ -45,7 +62,7 @@ async.waterfall(
     transformHeadlines,
     _.curry(pickHeadline)(usedDb),
     saveUsedHeadline,
-    postTweet
+    postToTargets
   ],
   wrapUp
 );
@@ -75,8 +92,8 @@ function saveUsedHeadline(ratedHeadline, done) {
   }
 }
 
-function postTweet(ratedHeadline, done) {
-  text = toTitleCase(ratedHeadline.headline);
+function postToTargets(ratedHeadline, done) {
+  var text = toTitleCase(ratedHeadline.headline);
   text = text.replace(/(\W)Us(\W)/g, '$1US$2');
 
   if (dryRun) {
@@ -84,11 +101,28 @@ function postTweet(ratedHeadline, done) {
     callNextTick(done, null);
   }
   else {
-    var body = {
-      status: text
-    };
-    twit.post('statuses/update', body, done);
+    var q = queue();
+    q.defer(postTweet, text);
+    q.defer(postToArchive, text);
+    q.await(done);
   }
+}
+
+function postTweet(text, done) {
+  var body = {
+    status: text
+  };
+  twit.post('statuses/update', body, done);
+}
+
+function postToArchive(text, done) {
+  var id = 'news-' + randomId(8);
+  staticWebStream.write({
+    id,
+    date: new Date().toISOString(),
+    caption: text
+  });
+  staticWebStream.end(done);
 }
 
 function wrapUp(error, data) {
