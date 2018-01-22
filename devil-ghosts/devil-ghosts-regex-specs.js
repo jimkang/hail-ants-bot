@@ -102,6 +102,34 @@ module.exports = [
   {
     regex: /robot/gi,
     replacement: ['golem', 'soul', 'witch-thrall']
+  },
+  {
+    regex: /blockchain/gi,
+    replacement: ['turtle stacking', 'power crystal', 'charm bracelet']
+  },
+  {
+    regex: /blockchains/gi,
+    replacement: ['stacks of turtles', 'power crystals', 'charm bracelets']
+  },
+  {
+    regex: /cryptocurrency/gi,
+    replacement: [
+      'pogs',
+      'imagination dollars',
+      'Wii Points',
+      'baby teeth',
+      'sacred spoors'
+    ]
+  },
+  {
+    regex: /cryptocurrencies/gi,
+    replacement: [
+      'pogs',
+      'imagination dollars',
+      'Wii Points',
+      'baby teeth',
+      'sacred spoors'
+    ]
   }
   // {
   //   regex: /human/ig,

@@ -78,5 +78,21 @@ module.exports = [
   {
     regex: /robot/i,
     score: 3
+  },
+  {
+    regex: /blockchain/gi,
+    score: 5
+  },
+  {
+    regex: /blockchains/gi,
+    score: 5
+  },
+  {
+    regex: /cryptocurrency/gi,
+    score: 5
+  },
+  {
+    regex: /cryptocurrencies/gi,
+    score: 5
   }
 ];
