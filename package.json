@@ -33,7 +33,7 @@
     "lodash": "^3.8.0",
     "probable": "^1.6.0",
     "seedrandom": "^2.4.0",
-    "static-web-archive-on-git": "^1.0.4",
+    "static-web-archive-on-git": "^2.0.1",
     "titlecase": "^1.0.2",
     "twit": "^1.1.20"
   }
