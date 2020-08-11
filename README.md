@@ -8,7 +8,7 @@ Installation
 
 Clone this repo.
 
-Then, create a `your-config.js` file that contains [Twitter API keys](https://gist.github.com/jimkang/34d16247b40097d8cace) and paths to the modules it should use. Example:
+Then, create a `your-behavior.js` file that contains [Twitter API keys](https://gist.github.com/jimkang/34d16247b40097d8cace) and paths to the modules it should use. Example:
 
     module.exports = {
       twitter: {
@@ -38,7 +38,7 @@ Usage
 
 Or:
 
-    CONFIG=<the relative path to your config file> node post-ant-tweet.js
+    BEHAVIOR=<the relative path to your behavior file> node post-ant-tweet.js
 
 You can also pass a `--dry` switch to make it just print whatever it would have tweeted without actually tweeting it.
 
