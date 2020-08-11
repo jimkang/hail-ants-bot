@@ -8,6 +8,7 @@ function createTransformHeadline(opts) {
   }
 
   return function transformHeadline(headlinePack) {
+    debugger;
     headlinePack.originalHeadline = headlinePack.headline;
     var transformedPack = regexSpecs.reduce(applyRegexSpec, headlinePack);
     if (transformedPack.headline === headlinePack.headline) {
