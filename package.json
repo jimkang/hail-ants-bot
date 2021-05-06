@@ -30,7 +30,7 @@
     "iscool": "^1.1.10",
     "jsonfile": "^2.0.0",
     "level": "^6.0.1",
-    "lodash": "^3.8.0",
+    "lodash": "^4.17.21",
     "probable": "^1.6.0",
     "seedrandom": "^2.4.0",
     "static-web-archive-on-git": "^2.0.1",
